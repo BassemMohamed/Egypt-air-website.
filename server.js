@@ -11,8 +11,9 @@
 
     // routes ======================================================================
     var html_dir = './public/html/';
+    require('./routes.js')(app); // configure our routes
 
-    
+    // KOL dh msh moshkelaa dlw2ty.
     app.get('/boarding', function(req, res) {
         
         res.sendfile(html_dir + 'boarding.html');
@@ -38,16 +39,9 @@
         res.sendfile(html_dir + 'viewFlights.html');
     });
 
-
-
-    
-
-
-    // application -------------------------------------------------------------
-    app.get('*', function(req, res) {
-        res.sendfile('./public/html/index.html'); // load the single view file (angular will handle the page changes on the front-end)
-    });
-
     // listen (start app with node server.js) ======================================
     app.listen(8080);
     console.log("App listening on port 8080");
+
+    // expose app           
+    exports = module.exports = app; 
