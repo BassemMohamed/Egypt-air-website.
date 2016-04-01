@@ -6,7 +6,7 @@ module.exports = function(app) {
 
         app.get('/api/flights', function(req, res) {
 
-        //	res.send();
+        	res.send();
         });
 
 
