@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<title> Egypt Air Lines</title>
+<head>
+	
+	<meta charset = "utf-8">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+
+    <!-- load css -->
+    <link rel="stylesheet" href="./../css/bootstrap/bootstrap.min.css">
+
+    <!-- JS -->
+    <script src="libs/angular/angular.min.js"></script>
+    <script src="libs/angular-route/angular-route.min.js"></script>
+
+    <!-- ANGULAR CUSTOM -->
+    <script src="js/controller/mainController.js"></script>
+    <script src="js/controller/viewFlightsController.js"></script>
+    <script src="js/services/viewFlightsService.js"></script>
+    <script src="js/appRoutes.js"></script>
+    <script src="js/app.js"></script>
+
+</head>
+
+<body ng-app="EgyptAirlines" ng-controller="mainController" >
+
+<!-- ANGULAR STATIC CONTENT -->
+<header style="background: url("./images/u2.png");" >
+	<img src="./../images/u2.png" style="width: 280px; height: 90px; padding: 10px">
+	<h1>Egypt Air Lines</h1>
+	<ul>
+		<li> <button>View Flights</button> </li>
+		<li> <button>Track A Flight</button> </li>
+		<li> <button>Boarding</button></li>
+		<li> <button>About us</button> </li>
+		<li> <input type="search" placeholder="What are you looking for ?"> <button type="submit">Search</button> </li>
+	</ul>
+</header>
+
+	<!-- ANGULAR DYNAMIC CONTENT -->
+    <div ng-view=></div>
+    
+</body>
