@@ -1,44 +1,129 @@
-<!DOCTYPE html>
-<html lang="en" ng-app='myApp'>
+<html ng-app="myApp" >
+<title>Egypt Airlines Home Page</title>
 
 <head>
-	<title>Egypt Airlines Home Page</title>
+
+    <meta charset = "utf-8">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+
+        <!-- load css -->	    
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/bootstrap.css">	
 
 	<!-- ANGULAR SCRIPTS -->
 	<script src="libs/angular.js"></script>
 	<script src="libs/angular-route.js"></script>
 	<script src="js/app.js"></script>
-	<script src="js/controllers/homeController.js"></script>
-	<script src="js/controllers/flightsController.js"></script>
-	<script src="js/controllers/flightController.js"></script>
-	<script src="js/controllers/trackFlightController.js"></script>
-	<script src="js/controllers/boardingController.js"></script>
-	<script src="js/controllers/confirmController.js"></script>
-	<script src="js/controllers/aboutController.js"></script>
-
+	<script src="js/controllers.js"></script>
 </head>
 
 <body>
 
-<!-- ANGULAR STATIC CONTENT -->
-<div id="headBody">
-	<a href="#home"><img src="./images/logo.png" style="width: 280px; height: 90px; padding: 10px"></a>
-	<h1>Egypt Air Lines</h1>
-	<ul style="margin: 0;">
-		<li> <a href="#flights"><button>View Flights</button></a></li>
-		<li> <a href="#booking"><button>Book a Flight</button></a></li>
-		<li> <a href="#trackflight"><button>Track A Flight</button></a> </li>
-		<li> <a href="#boarding"><button>Boarding</button></a></li>
-		<li> <a href="#about"><button>About us</button></a></li>
-		<li> <input type="search" placeholder="What are you looking for ?"> <button type="submit">Search</button> </li>
-	</ul>
+<div id="myCarousel"  class="carousel slide">
+    
+  <ol class="carousel-indicators">
+  <li  data-target="#myCarousel" data-slide-to="0"  class="active"></li>    
+    <li  data-target="#myCarousel" data-slide-to="1"></li>    
+  <li  data-target="#myCarousel" data-slide-to="2"></li>
+
+<li  data-target="#myCarousel" data-slide-to="3"></li>
+
+
+
+  </ol>
+<div class="carousel-inner" style=" height: 45%;">
+    
+ <div class="item"><img src="images/1.jpg" alt="GTA V" width="100%" class="img-responsive">
+     <div class="carousel-caption">
+        <h3></h3>
+        <p></p>
+    </div></div>
+
+    <div class="item active"><img src="images/2.jpg" alt="GTA V" width="100%" class="img-responsive"><div class="carousel-caption">
+        <h3></h3>
+      
+    </div>
+
+     </div>
+     <div class="item"><img src="images/3.jpg" alt="GTA V" width="100%" class="img-responsive">
+     <div class="carousel-caption">
+        <h3></h3>
+        <p></p>
+    </div></div>
+     <div class="item"><img src="images/4.jpg" alt="GTA V" width="100%" class="img-responsive">
+     <div class="carousel-caption">
+        <h3> </h3>
+        <p> </p>
+    </div></div>
+
 </div>
+<a class="carousel-control left" href="#myCarousel" data-slide = "prev"></a>
+
+<span class ="icon-prev"></span>
+
+<a class="carousel-control right" href="#myCarousel" data-slide = "next"></a>
+
+<span class ="icon-next"></span>
+</div>
+
+<section class="second">
+<div id="nav">
+    <div id="nav_wrapper">
+       <ul style="   position: relative; width: 1700px;">
+            <li style="background-color: rgba(0, 157, 226, 0);"> <a href="#home"><button><img id="ok" src="images/logo.png"></button></a></li>
+            <li style="background-color: rgba(0, 157, 226, 0);" ><a href="#flights"><button>View flights</button></a>
+            </li>
+            <li style="background-color: rgba(0, 157, 226, 0);"> <a href="#trackflight"><button>Track A Flight</button></a> 
+            </li>
+            <li style="background-color: rgba(0, 157, 226, 0);"><a href="#boarding"><button>Boarding</button></a>
+            </li>
+
+            <li style="background-color: rgba(0, 157, 226, 0);">
+               <input type="text" name="username" style="
+          border: 2px solid #A4697C;
+          border-radius: 40px;
+          height: 28px;
+          width: 206px;
+        "><button>Search</button>
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+<div>
 
 <!-- ANGULAR DYNAMIC CONTENT -->
 <div id="mainBody">
 <div ng-view></div>
 </div>
 
-</body>
+<br>
+<br>
 
+   <footer class="site-footer"   >
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <nav class="footer-nav clearfix">
+                            <ul class="footer-menu">
+                                <li style="background-color: rgba(0, 157, 226, 0);"><a href="#/">Home</a></li>
+                                <li  style="background-color: rgba(0, 157, 226, 0);"> <a href="#/about">About Us</a></li>
+                                <li style="background-color: rgba(0, 157, 226, 0);"><a href="#/about">Contact us</a></li>
+                            </ul> <!-- /.footer-menu   -->
+                        </nav> <!-- /.footer-nav -->
+                    </div> <!-- /.col-md-12 -->
+                </div> <!-- /.row -->
+                <div class="row">
+                    <div class="col-md-12">
+                    <p class="copyright-text">Copyright &copy; 2016 : Developed by Code worms Team</p>
+                </div> <!-- /.col-md-12 -->
+                </div> <!-- /.row -->
+            </div> <!-- /.container -->
+        </footer> <!-- /.site-footer -->
+</section>
+</div>
+</body>
 </html>
+
+ 
