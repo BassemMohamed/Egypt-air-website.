@@ -1,42 +1,44 @@
 <!DOCTYPE html>
-<title> Egypt Air Lines</title>
+<html lang="en" ng-app='myApp'>
+
 <head>
-	
-	<meta charset = "utf-8">
-    <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+	<title>Egypt Airlines Home Page</title>
 
-    <!-- load css -->
-    <link rel="stylesheet" href="./../css/bootstrap/bootstrap.min.css">
-
-    <!-- JS -->
-    <script src="libs/angular/angular.min.js"></script>
-    <script src="libs/angular-route/angular-route.min.js"></script>
-
-    <!-- ANGULAR CUSTOM -->
-    <script src="js/controller/mainController.js"></script>
-    <script src="js/controller/viewFlightsController.js"></script>
-    <script src="js/services/viewFlightsService.js"></script>
-    <script src="js/appRoutes.js"></script>
-    <script src="js/app.js"></script>
+	<!-- ANGULAR SCRIPTS -->
+	<script src="libs/angular.js"></script>
+	<script src="libs/angular-route.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/controllers/homeController.js"></script>
+	<script src="js/controllers/flightsController.js"></script>
+	<script src="js/controllers/flightController.js"></script>
+	<script src="js/controllers/trackFlightController.js"></script>
+	<script src="js/controllers/boardingController.js"></script>
+	<script src="js/controllers/confirmController.js"></script>
+	<script src="js/controllers/aboutController.js"></script>
 
 </head>
 
-<body ng-app="EgyptAirlines" ng-controller="mainController" >
+<body>
 
 <!-- ANGULAR STATIC CONTENT -->
-<header style="background: url("./images/u2.png");" >
-	<img src="./../images/u2.png" style="width: 280px; height: 90px; padding: 10px">
+<div id="headBody">
+	<a href="#home"><img src="./images/logo.png" style="width: 280px; height: 90px; padding: 10px"></a>
 	<h1>Egypt Air Lines</h1>
-	<ul>
-		<li> <button>View Flights</button> </li>
-		<li> <button>Track A Flight</button> </li>
-		<li> <button>Boarding</button></li>
-		<li> <button>About us</button> </li>
+	<ul style="margin: 0;">
+		<li> <a href="#flights"><button>View Flights</button></a></li>
+		<li> <a href="#booking"><button>Book a Flight</button></a></li>
+		<li> <a href="#trackflight"><button>Track A Flight</button></a> </li>
+		<li> <a href="#boarding"><button>Boarding</button></a></li>
+		<li> <a href="#about"><button>About us</button></a></li>
 		<li> <input type="search" placeholder="What are you looking for ?"> <button type="submit">Search</button> </li>
 	</ul>
-</header>
+</div>
 
-	<!-- ANGULAR DYNAMIC CONTENT -->
-    <div ng-view=></div>
-    
+<!-- ANGULAR DYNAMIC CONTENT -->
+<div id="mainBody">
+<div ng-view></div>
+</div>
+
 </body>
+
+</html>

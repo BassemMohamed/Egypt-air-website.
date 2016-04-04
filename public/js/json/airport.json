@@ -1,0 +1,59 @@
+[
+{
+        "_id": "500",
+        "name": "King Khaled Airport",
+        "status": 1,
+        "country": "KSA",
+        "continent": "OC",
+        "lon": "215.86667",
+        "lat": "180.233333",
+        "type": "airport",
+        "size": "small"
+},
+{
+        "_id": "200",
+        "name": "Cairo Airport",
+        "status": 1,
+        "country": "Egypt",
+        "continent": "OC",
+        "lon": "200.86667",
+        "lat": "118.233333",
+        "type": "airport",
+        "size": "big"
+},
+{
+        "_id": "100",
+        "name": "JFK Airport",
+        "status": 1,
+        "country": "USA",
+        "continent": "OC",
+        "lon": "149.86667",
+        "lat": "114.233333",
+        "type": "airport",
+        "size": "big"
+},
+{
+        "_id": "330",
+        "name": "New York Airport",
+        "status": 1,
+        "country": "USA",
+        "continent": "OC",
+        "lon": "199.86667",
+        "lat": "18.233333",
+        "type": "airport",
+        "size": "small"
+},
+{
+        "_id": "485",
+        "name": "Charles de Gaulle Airport",
+        "status": 1,
+        "country": "France",
+        "continent": "OC",
+        "lon": "159.86667",
+        "lat": "111.233333",
+        "type": "airport",
+        "size": "big"
+}
+
+
+]

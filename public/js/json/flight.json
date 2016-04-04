@@ -1,0 +1,82 @@
+[
+{
+    "_id": "1001",
+    "aircraft-id": "4000",
+    "departure-date": "Sat March 15 2016 17:54:57 GMT+0300 (EST)",
+    "duration": "5 hours",
+    "arrival-date": "Sun March 15 2016 22:54:57 GMT+0300 (EST)",
+    "origin-id": "330",
+    "destination-id": "500",
+    "seatmap":
+            [
+              [0,0,1,0],
+              [0,0,0,0],
+              [0,4,6,5],
+              [0,2,0,3]
+            ]
+},
+{
+    "_id": "1002",
+    "aircraft-id": "4010",
+    "departure-date": "Sun May 29 2016 15:54:57 GMT+0300 (EST)",
+    "duration": "2 hours",
+    "arrival-date": "Sun May 29 2016 17:54:57 GMT+0300 (EST)",
+    "origin-id": "100",
+    "destination-id": "330",
+    "seatmap":
+            [
+              [0,2,0,3],
+              [0,0,1,0],
+              [0,0,0,0],
+              [0,4,6,5]
+            ]
+},
+{
+    "_id": "1003",
+    "aircraft-id": "4020",
+    "departure-date": "Sun July 29 2016 12:54:57 GMT+0300 (EST)",
+    "duration": "2 hours",
+    "arrival-date": "Sun July 29 2016 14:54:57 GMT+0300 (EST)",
+    "origin-id": "200",
+    "destination-id": "485",
+    "seatmap":
+            [
+              [0,0,1,0],
+              [0,2,0,3],
+              [0,0,0,0],
+              [0,4,6,5]
+            ]
+},
+{
+    "_id": "1004",
+    "aircraft-id": "4030",
+    "departure-date": "Sun April 29 2016 19:01:57 GMT+0300 (EST)",
+    "duration": "2 hours",
+    "arrival-date": "Sun April 29 2016 21:01:57 GMT+0300 (EST)",
+    "origin-id": "100",
+    "destination-id": "200",
+    "seatmap":
+            [
+              [0,4,6,5],
+              [0,0,0,0],
+              [0,0,1,0],
+              [0,2,0,3]
+            ]
+},
+{
+    "_id": "1005",
+    "aircraft-id": "4040",
+    "departure-date": "Sun June 29 2016 18:00:57 GMT+0300 (EST)",
+    "duration": "3 hours",
+    "arrival-date": "Sun June 29 2016 21:00:57 GMT+0300 (EST)",
+    "origin-id": "485",
+    "destination-id": "500",
+    "seatmap":
+            [
+                [0,0,1,0],
+                [0,2,0,3],
+                [0,4,6,5],
+                [0,0,0,0]
+            ]
+}
+]
