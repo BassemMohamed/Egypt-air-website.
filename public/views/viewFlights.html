@@ -1,0 +1,37 @@
+<div id="viewflights" ng-controller="flightsController">
+
+<h1> View Flights </h1>
+
+<!--div for all except search-->
+<div>
+	<!--div for 1st row left-->
+	<div style="left: 25%; position:absolute;">Class:  <select name="classes">
+  <option value="VIP">VIP</option>
+  <option value="First Class">First Class</option>
+  <option value="Business">Business</option>
+  <option value="Economy">Economy</option>
+</select>
+
+<!--div for 2nd row left-->
+
+<div>From: <input type="textbox" name="from" value=""></div>
+	</div>
+
+<!--div for 1st row right-->
+	<div style="left: 60%; position:absolute;">Price Range: <select name="classes">
+  <option value="1">$200-250</option>
+  <option value="2">$250-350</option>
+  <option value="3">$350-500</option>
+  <option value="4">$500+</option>
+</select>
+
+	<!--div for 2nd row right-->
+
+	<div>To: <input type="textbox" name=to value="">
+	<input type="button" name="search" value="Search Flights"></div>
+	</div>
+
+
+</div>
+	
+</div>

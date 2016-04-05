@@ -1,0 +1,38 @@
+<div id="confirm" ng-controller="confirmController">
+<h2> Confrim your ticket reservation. </h2> <br>
+<div id="flight-details">
+
+<p> Flight Details:- </p> <br>
+
+<div style="display: inline;">
+<ul>
+<li> From {{originid}} To {{destinationid}} </li>
+<li> Departure time {{departuredate}} Arrival time {{arrivaldate}} </li> <br>
+</ul>
+</div>
+
+</div>
+<div id="personal-details">
+
+<p> Personal Details:- </p> <br>
+
+<div style="display: inline;">
+<ul>	
+<li> First Name:   <br><input type="text" name="firstname" > </input><br> </li>
+<li> Last Name:    <br><input type="text" name="lastname"> </input><br> </li>
+<li> Passport ID:  <br><input type="text" name="passportid"> </input><br> </li>
+<li> Issue Date:   <br><input type="text" name="issuedate"> </input><br> </li>
+<li> Expiry Date:  <br><input type="text" name="expirydate"> </input><br> </li>
+</ul>
+</div>
+
+</div>
+<div id="payment-details">
+	
+<p> Payment Details:- </p> <br>
+
+Payment Method: <input type="text" name="paymentmethod"></input> <br><br>
+<button>Confirm</button> <br>
+
+</div>
+</div>

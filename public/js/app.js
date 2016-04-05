@@ -1,3 +1,50 @@
+<<<<<<< HEAD
 //app.js
 angular.module('EgyptAirlines', ['ngRoute', 'appRoutes', 'mainController',
                                 'viewFlightsController', 'viewFlightsService']);
+=======
+var myApp = angular.module('myApp', ['ngRoute']);
+
+myApp.config(function($routeProvider) {
+
+    $routeProvider.when('/', {
+        templateUrl: 'views/home.html',
+        controller: 'homeController'
+    })
+
+    $routeProvider.when('/home', {
+        templateUrl: 'views/home.html',
+        controller: 'homeController'
+    })
+
+    $routeProvider.when('/flights', {
+        templateUrl: 'views/viewFlights.html',
+        controller: 'flightsController'
+    });
+
+    $routeProvider.when('/flight', {
+        templateUrl: 'views/flight.html',
+        controller: 'flightController'
+    });
+
+    $routeProvider.when('/trackflight', {
+        templateUrl: 'views/trackFlight.html',
+        controller: 'trackFlightController'
+    });
+
+    $routeProvider.when('/booking', {
+        templateUrl: 'views/confirm.html',
+        controller: 'confirmController'
+    });
+
+    $routeProvider.when('/boarding', {
+        templateUrl: 'views/boarding.html',
+        controller: 'boardingController'
+    });
+
+    $routeProvider.when('/about', {
+        templateUrl: 'views/about.html',
+        controller: 'aboutController'
+    });
+});
+>>>>>>> master
