@@ -41,7 +41,7 @@ myApp.config(function($routeProvider) {
         templateUrl: 'views/about.html',
         controller: 'aboutController'
     });
-    $routeProvider.otherwise({
-    redirectTo: '/'
-    });
+    // $routeProvider.otherwise({
+    // redirectTo: '/'
+    // });
 });
