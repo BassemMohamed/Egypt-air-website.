@@ -1,3 +1,16 @@
+// Main Controller
+myApp.controller('mainController',function mainController($scope, $http) 
+{
+	$http({
+	    method: 'GET',
+	    url: '/api/quote'
+	}).then(function successCallback(response) {
+	    $scope.quotes = response;
+	    console.log("Done");
+	}, function errorCallback(response) {
+	    console.log(response);
+	});
+});
 // Home Controller
 myApp.controller('homeController',function homeController($scope) 
 {
@@ -19,7 +32,7 @@ myApp.controller('trackFlightController',function trackFlightController($scope)
 
 });
 // Boarding Controller
-myApp.controller('boardingController',function boardingController($scope) 
+myApp.controller('boardingController',function boardingController($scope ) 
 {
 
 });
@@ -31,9 +44,6 @@ myApp.controller('aboutController',function aboutController($scope)
 // Confirm Controller
 myApp.controller('confirmController',function confirmController($scope) 
 {
-$scope.originid = 330;
-$scope.destinationid = 500;
-$scope.departuredate = 'Sat March 15 2016 17:54:57 GMT+0300 (EST)';
-$scope.arrivaldate = 'Sun March 15 2016 22:54:57 GMT+0300 (EST)';
+
 });
 
