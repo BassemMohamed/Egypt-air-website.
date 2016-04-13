@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-//app.js
-angular.module('EgyptAirlines', ['ngRoute', 'appRoutes', 'mainController',
-                                'viewFlightsController', 'viewFlightsService']);
-=======
 var myApp = angular.module('myApp', ['ngRoute']);
 
 myApp.config(function($routeProvider) {
@@ -47,4 +42,3 @@ myApp.config(function($routeProvider) {
         controller: 'aboutController'
     });
 });
->>>>>>> master

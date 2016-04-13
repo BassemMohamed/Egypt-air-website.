@@ -9,19 +9,10 @@
     "express"    : "~4.7.2",
     "mongoose"   : "~3.6.2",
     "body-parser" : "~1.4.2",
-<<<<<<< HEAD
     "method-override" : "~2.0.2"
   },
-  "scripts": {
+  "scripts":
+   {
       "start": "node server.js"
     }
-=======
-    "method-override" : "~2.0.2",
-    "dotenv"      : "*",
-    "mongodb"     : "*",
-    "jsonwebtoken": "*",
-    "underscore"  : "*",
-    "moment"      : "*"
-  }
->>>>>>> dev
 }
