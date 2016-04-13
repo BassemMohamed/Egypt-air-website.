@@ -1,6 +1,7 @@
 // viewFlightsService
 
-angular.module('mainService', []).factory('Flights', ['$http', function($http) {
+angular.module('mainService', []).factory('Flights', ['$http', function($http) 
+{
 
     return {
         // call to get all nerds
