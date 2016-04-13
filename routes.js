@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-// routes.js
-=======
 // routes.js  	
 var db = require('./db.js');
 var seeder = require('./dbSeed.js');
->>>>>>> dev
 
 module.exports = function(app) 
 {
@@ -28,17 +24,6 @@ module.exports = function(app)
         res.sendfile('./public/views/index.html');
     });
 
-<<<<<<< HEAD
-        app.get('/api/flights', function(req, res) {
-
-        	res.send();
-        });
-
-
-        app.get('*', function(req, res) {
-            res.sendfile('./public/index.html'); // load our public/index.html file
-        });
-=======
         /* SEED DB */
     app.get('/db/seed', function(req, res) {
     	seeder.seed(function(cb)
@@ -139,6 +124,5 @@ module.exports = function(app)
         // return an array of objects matching format above
         return [{}];
     }); 
->>>>>>> dev
 
 };

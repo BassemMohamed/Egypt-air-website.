@@ -4,7 +4,7 @@
   "description"  : "Simple Airlines application.",
   "main"         : "server.js",
   "author"       : "CodeWorms",
-  "dependencies" :
+  "dependencies" : 
   {
     "express"    : "~4.7.2",
     "mongoose"   : "~3.6.2",
@@ -15,10 +15,5 @@
     "jsonwebtoken": "*",
     "underscore"  : "*",
     "moment"      : "*"
-  
-  },
-  "scripts":
-   {
-      "start": "node server.js"
-    }
+  }
 }
