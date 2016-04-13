@@ -26,7 +26,7 @@ exports.connect = function(cb)
 exports.seed = function(collectionName,data)
 {
   DB.collection(collectionName).insert(data, function(err, doc) {
-        console.log(data);
+        console.log("Data Seeded!");
     if(err) throw err;
   });
 }
