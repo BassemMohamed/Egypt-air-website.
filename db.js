@@ -31,18 +31,18 @@ exports.seed = function(collectionName,data)
   });
 }
 
-// Not Working
 exports.getFlights = function(cb) {
     var Flights = DB.collection('flights').find().toArray(function(err, docs) {
         var intCount = docs.length;
-        if (initCount = 0)
+        console.log("Found : " + intCount + " Flights");
+        if (intCount == 0)
         {
           console.log("Database Empty");
         }
         if (intCount > 0) {
             var strJson = "[";
             for (var i = 0; i < intCount;) {
-                strJson += strJson = '{"_id": "' + docs[i]._id + '","aircraft-id": "' + docs[i].aircraft-id + '","departure-date": "' + docs[i].departure-date + '","duration": "' + docs[i].duration + '","arrival-date": "' + docs[i].arrival-date + '","origin-id": "' + docs[i].origin-id + '","destination-id": "' + docs[i].destination-id + '","seatmap": "' + docs[i].seatmap + '"}';
+                strJson += strJson = '{"_id": "' + docs[i]._id + '","aircraftid": "' + docs[i].aircraftid + '","departuredate": "' + docs[i].departuredate + '","duration": "' + docs[i].duration + '","arrivaldate": "' + docs[i].arrivaldate + '","originid": "' + docs[i].originid + '","destinationid": "' + docs[i].destinationid + '","seatmap": "' + docs[i].seatmap + '"}';
                 i = i + 1;
                 if (i < intCount) {
                     strJson += ',';
@@ -55,11 +55,11 @@ exports.getFlights = function(cb) {
     });
 }
 
-// Working Fine
 exports.getAirports = function(cb) {
     var airports = DB.collection('airport').find().toArray(function(err, docs) {
         var intCount = docs.length;
-        if (initCount = 0)
+        console.log("Found : " + intCount + " Airports");
+        if (intCount == 0)
         {
           console.log("Database Empty");
         }
@@ -79,11 +79,11 @@ exports.getAirports = function(cb) {
     });
 }
 
-// Working Fine
 exports.getAirplanes = function(cb) {
     var airplanes = DB.collection('airplane').find().toArray(function(err, docs) {
         var intCount = docs.length;
-        if (initCount = 0)
+        console.log("Found : " + intCount + " Airplanes");
+        if (intCount == 0)
         {
           console.log("Database Empty");
         }
@@ -103,18 +103,18 @@ exports.getAirplanes = function(cb) {
     });
 }
 
-// Not Working
 exports.getBookings = function(cb) {
     var bookings = DB.collection('booking').find().toArray(function(err, docs) {
         var intCount = docs.length;
-        if (initCount = 0)
+        console.log("Found : " + intCount + " Bookings");
+        if (intCount == 0)
         {
           console.log("Database Empty");
         }
         if (intCount > 0) {
             var strJson = "[";
             for (var i = 0; i < intCount;) {
-                strJson += strJson = '{"_id": "' + docs[i]._id + '","flight-id": "' + docs[i].flight-id + '","firstName": "' + docs[i].firstName + '","lastName": "' + docs[i].lastName + '","passport": "' + docs[i].passport + '","issue-date": "' + docs[i].issue-date + '","expiry-date": "' + docs[i].expiry-date + '","receipt-number": "' + docs[i].receipt-number + '"}';
+                strJson += strJson = '{"_id": "' + docs[i]._id + '","flightid": "' + docs[i].flightid + '","firstName": "' + docs[i].firstName + '","lastName": "' + docs[i].lastName + '","passport": "' + docs[i].passport + '","issuedate": "' + docs[i].issuedate + '","expirydate": "' + docs[i].expirydate + '","receiptnumber": "' + docs[i].receiptnumber + '"}';
                 i = i + 1;
                 if (i < intCount) {
                     strJson += ',';
