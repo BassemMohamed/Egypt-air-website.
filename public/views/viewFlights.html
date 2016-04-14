@@ -1,37 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<head>
+		<link rel="stylesheet" href="../css/jquery-ui.css">
+		<script src="../libs/jquery.min.js"></script>
+		<script src="../libs/jquery-ui.min.js"></script>
+
+		<script language="javascript" type="text/javascript">
+		$(document).ready(function() {
+			$("#datepicker").datepicker({ showOn: "both",
+																		buttonImage: "../images/img/1.jpg",
+																		buttonImageOnly: true });
+		});
+		</script>
+	</head>
+
+
+</head>
+<body>
+
 <div id="viewflights" ng-controller="flightsController">
 
-<h1> View Flights </h1>
+<h1 style="color: white;"> View Flights </h1>
 
-<!--div for all except search-->
-<div>
-	<!--div for 1st row left-->
-	<div style="left: 25%; position:absolute;">Class:  <select name="classes">
-  <option value="VIP">VIP</option>
-  <option value="First Class">First Class</option>
-  <option value="Business">Business</option>
-  <option value="Economy">Economy</option>
+<div id="container" style="opacity: .85;">
+            <form>
+                <h1 style="color: navy;">Advanced Search</h1>
+                <div class="line">
+									<label for="from">From: </label><select name="destinations">
+										<option value="cairo">Cairo</option>
+ 										<option value="berlin">Berlin</option>
+ 										<option value="kuala">Kuala Lumpur</option>
+ 										<option value="la">Los Angeles</option>
+										<option value="paris">Paris</option>
+										<option value="london">London</option>
+							</select>
+								<label for="to">To: </label><select name="destinations">
+									<option value="cairo">Cairo</option>
+									<option value="berlin">Berlin</option>
+									<option value="kuala">Kuala Lumpur</option>
+									<option value="la">Los Angeles</option>
+									<option value="paris">Paris</option>
+									<option value="london">London</option>
+						</select></div>
+                <!-- You may want to consider adding a "confirm" password box also -->
+                <div class="line"><label for="surname">Select Class: </label>
+									<select name="destinations">
+										<option value="vip">VIP</option>
+										<option value="fclass">First Class</option>
+										<option value="economyplus">Economy Plus</option>
+										<option value="economy">Economy</option>
+										<option value="business">Business</option>
+							</select>
+								</div>
+                <div class="line"><label for="other_names">Price Range:</label>
+									<select name="classes">
+  								<option value="1">$200-250</option>
+  								<option value="2">$250-350</option>
+  								<option value="3">$350-500</option>
+  								<option value="4">$500+</option>
 </select>
 
-<!--div for 2nd row left-->
 
-<div>From: <input type="textbox" name="from" value=""></div>
-	</div>
+								</div>
+                Date of Departure:
+									<input id="datepicker" />
+									<script language="javascript" type="text/javascript">
+									$(document).ready(function() {
+										$("#datepicker").datepicker();
+									});
+									</script>
+								Date of Arrival:
+								<form><input id="datepicker"/></form>
 
-<!--div for 1st row right-->
-	<div style="left: 60%; position:absolute;">Price Range: <select name="classes">
-  <option value="1">$200-250</option>
-  <option value="2">$250-350</option>
-  <option value="3">$350-500</option>
-  <option value="4">$500+</option>
-</select>
+                <div class="line submit"><input type="submit" value="Search" /></div>
 
-	<!--div for 2nd row right-->
-
-	<div>To: <input type="textbox" name=to value="">
-	<input type="button" name="search" value="Search Flights"></div>
-	</div>
-
+            </form>
+        </div>
 
 </div>
-	
-</div>
+<br><br><br>
+<ul class="flightlist">
+	<li class="flight cf">
+			<div><img src="../images/p.png"></img></div>
+			<div class="inside" style="margin-left: 40%;">Flight-815</div>
+			<div class="inside" style="margin-left: 40%;">Cairo - Berlin</div>
+			<div style="margin-left: 40%;">8:45 - 12:45
+			<input type="button" name="book" value="Book"  style="margin-left: 40%;"></div>
+	</li>
+	<li class="flight cf">
+			<img src="../images/p.png"></img>
+			<div class="inside" style="margin-left: 40%;">Flight-223</div>
+			<div class="inside" style="margin-left: 40%;">Paris - Cairo</div>
+			<div style="margin-left: 40%;">10:30 - 12:45
+			<input type="button" name="book" value="Book"  style="margin-left: 40%;"></div>
+	</li>
+	<li class="flight cf">
+		<img src="../images/p.png"></img>
+		<div class="inside" style="margin-left: 40%;">Flight-619</div>
+		<div class="inside" style="margin-left: 40%;">Cairo - Los Angeles</div>
+		<div style="margin-left: 40%;">8:15 - 17:20
+		<input type="button" name="book" value="Book"  style="margin-left: 40%;"></div>
+	</li>
+	<li class="flight cf">
+		<img src="../images/p.png"></img>
+		<div class="inside" style="margin-left: 40%;">Flight-815</div>
+		<div class="inside" style="margin-left: 40%;">Berlin - Cairo</div>
+		<div style="margin-left: 40%;">16:30 - 20:30
+		<input type="button" name="book" value="Book"  style="margin-left: 40%;"></div>
+	</li>
+	<li class="flight cf">
+		<img src="../images/p.png"></img>
+		<div class="inside" style="margin-left: 40%;">Flight-283</div>
+		<div class="inside" style="margin-left: 40%;">Cairo - Kuala Lumpur</div>
+		<div style="margin-left: 40%;">8:45 - 12:45
+		<input type="button" name="book" value="Book"  style="margin-left: 40%;"></div>
+	</li>
+</ul>
+</body>
+
+</html>

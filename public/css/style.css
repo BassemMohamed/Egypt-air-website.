@@ -388,3 +388,113 @@ margin-right: 40px
     border-radius:10px;
     background:silver;
 }
+
+.wrapper{
+  background-color: white;
+  border-width: 10px;
+  border-color: black;
+  padding: 10px;
+}
+
+#container {
+width:900px; margin:0 auto;
+background-color: white;
+border-width: 10px;
+border-color: black;
+border-radius: 25px 25px 25px 25px;
+}
+
+form label {
+display:inline-block; width:140px;
+}
+
+.flightlist {
+  background: #EEE8D5;
+  width: 35%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border-radius: 10px 10px 10px 10px;
+  opacity: .95;
+  z-index: 10;
+}
+
+.flightlist ul {
+  margin: 0;
+  padding: 0;
+  background: #FDF6E3;
+}
+
+.flightlist li {
+  margin: 0;
+  padding: 10px 10px 0 10px;
+  height:92px;
+  border-bottom: 1px dotted black;
+}
+
+.flightlist a {
+  display: block;
+  text-decoration: none;
+}
+
+.flightlist li:hover {
+  background: #FDF6E3;
+  height:92px;
+}
+
+.flight img {
+  display: block;
+  float: left;
+  width: 60px;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.flight info {
+  display: block;
+  float: left;
+  padding-left: 120px !important;
+}
+
+.flight:last-child {
+  border-bottom:none;
+}
+
+.flightinfo {
+  font-size: 1.1em;
+  line-height: 160%;
+  background: #EEE8D5;
+  color: #0F4150;
+  width: 90%;
+  min-width: 320px;
+  max-width: 620px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 20px 30px;
+  border-radius: 10px;
+  z-index: 20;
+}
+
+.flightinfo h1{
+  font-size: 1.8em;
+  margin-bottom: 0;
+}
+
+.flightinfo img {
+  width: 40%;
+  max-width: 130px;
+  border-radius: 20px;
+}
+
+.flightinfo .btn {
+
+}
+ul{
+  list-style-type: none;
+  padding-left: 7;
+}
+.inside div{
+   margin-left: 40%;
+}
