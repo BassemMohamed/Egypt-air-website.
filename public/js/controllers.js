@@ -3,9 +3,9 @@ myApp.controller('mainController',function mainController($scope, $http)
 {
 	$http({
 	    method: 'GET',
-	    url: '/api/quote'
+	    url: '/api/flights'
 	}).then(function successCallback(response) {
-	    $scope.quotes = response;
+	    $scope.flights = response;
 	    console.log("Done");
 	}, function errorCallback(response) {
 	    console.log(response);
