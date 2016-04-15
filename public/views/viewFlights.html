@@ -1,37 +1,86 @@
-<div id="viewflights" ng-controller="flightsController">
+<!doctype html>
+<html ng-app="myApp" >
 
-<h1> View Flights </h1>
 
-<!--div for all except search-->
-<div>
+<body>
+<div id="viewflights" ng-controller="flightsController" >
+
+
+	<div>
+
+	<h1 s > View Flights </h1>
+
+	<!--div for all except search-->
+
 	<!--div for 1st row left-->
-	<div style="left: 25%; position:absolute;">Class:  <select name="classes">
-  <option value="VIP">VIP</option>
-  <option value="First Class">First Class</option>
-  <option value="Business">Business</option>
-  <option value="Economy">Economy</option>
-</select>
+	
+	Class :	
+	<select name="classes">
+  				<option value="VIP">VIP</option>
+  				<option value="First Class" style="color: black">First Class</option>
+  				<option value="Business" style="color: black">Business</option>
+  				<option value="Economy" style="color: black">Economy</option>
+	</select>
+	<br>
+	<br>
 
-<!--div for 2nd row left-->
 
-<div>From: <input type="textbox" name="from" value=""></div>
+	<!--div for 2nd row left-->
+
+	
+	
+	<div class="line">
+		<label for="from">From: </label>
+			<select name="destinations">
+				<option value="cairo">Cairo</option>
+ 				<option value="berlin">Berlin</option>
+ 				<option value="kuala">Kuala Lumpur</option>
+ 				<option value="la">Los Angeles</option>
+				<option value="paris">Paris</option>
+				<option value="london">London</option>
+			</select>
+		<label for="to" style="margin-left: 200px;">To: </label>
+			<select name="destinations">
+				<option value="cairo">Cairo</option>
+				<option value="berlin">Berlin</option>
+				<option value="kuala">Kuala Lumpur</option>
+				<option value="la">Los Angeles</option>
+				<option value="paris">Paris</option>
+				<option value="london">London</option>
+			</select>
 	</div>
 
-<!--div for 1st row right-->
-	<div style="left: 60%; position:absolute;">Price Range: <select name="classes">
-  <option value="1">$200-250</option>
-  <option value="2">$250-350</option>
-  <option value="3">$350-500</option>
-  <option value="4">$500+</option>
-</select>
 
-	<!--div for 2nd row right-->
+	<br>
+	<form action="">
+	Rounded Flight	<input class="round_flight" type="checkbox" name="round_flight" ng-model="checked" aria-label="Toggle ngHide" value="1" /><br>	 
+	</form>
 
-	<div>To: <input type="textbox" name=to value="">
-	<input type="button" name="search" value="Search Flights"></div>
+	<div class="line">
+	<div class="Date of Departure:">
+       <label for="Date of Departure:">Date of departure:</label>	
+       <input type="text" name="Date of Departure:"id="datepicker" style="width: 100px"/>
+   </div>	
+	<div class="Date_of_Arrival" ng-show="checked">
+       <label for="Date_of_Arrival" style="margin-left: 200px">Date of Arrival:</label>
+       <input type="text" name="Date_of_Arrival" id="datepicker" style="width: 100px"/>
+   </div>
+   </div>
+
+   <br>
+   <br>
+
+
+   <div class="line submit" style="">
+        <a href="#flight"><input  type="submit" value="Search" style="color: black; width:100px;  margin-left: 750px" /></a>
+   </div>	
+	
+		
+
+
 	</div>
 
-
-</div>
 	
 </div>
+</body>
+</html>

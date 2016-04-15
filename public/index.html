@@ -20,7 +20,6 @@
   <script src="./libs/bootstrap.min.js"></script>
 </head>
 
-<<<<<<< HEAD
 <script type="text/javascript">
 $('.button').click(function () {
   $('.overlay').show();
@@ -30,14 +29,14 @@ $('.close').click(function () {
 })
 </script>
 
-<body>
-=======
+
+
+
 <body ng-controller="mainController">
->>>>>>> origin/dev
 
 <section class="second">
+  dic
   <nav class="navbar navbar-default navbar-inverse" role="navigation">
-<div>
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div>
@@ -75,69 +74,20 @@ $('.close').click(function () {
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Search" style="font-size: 1.6rem;">
             </div>
-            <button type="submit" class="btn btn-default">Submit</button>
+            <button type="submit" class="btn btn-default">Search</button>
           </form>
-          <!-- <ul class="nav navbar-nav navbar-right">
-            <li><p class="navbar-text">Already have an account?</p></li>
-            <li class="dropdown">
-              <a href="" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
-    			<ul id="login-dp" class="dropdown-menu">
-    				<li>
-    					 <div class="row">
-    							<div class="col-md-12">
-    								Login via
-    								<div class="social-buttons">
-    									<a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
-    									<a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
-    								</div>
-                                    or
-    								 <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
-    										<div class="form-group">
-    											 <label class="sr-only" for="exampleInputEmail2">Email address</label>
-    											 <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
-    										</div>
-    										<div class="form-group">
-    											 <label class="sr-only" for="exampleInputPassword2">Password</label>
-    											 <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
-                                                 <div class="help-block text-right"><a href="">Forget the password ?</a></div>
-    										</div>
-    										<div class="form-group">
-    											 <button type="submit" class="btn btn-primary btn-block">Sign in</button>
-    										</div>
-    										<div class="checkbox">
-    											 <label>
-    											 <input type="checkbox"> keep me logged-in
-    											 </label>
-    										</div>
-    								 </form>
-    							</div>
-    							<div class="bottom text-center">
-    								New here ? <a href="#"><b>Join Us</b></a>
-    							</div>
-    					 </div>
-    				</li>
-    			</ul>
-            </li>
-          </ul> -->
+         ->
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
-    </nav>
+  </nav>
 
-    <div class='overlay'>
-        <div class='popup'>
-            <div class='close'>&#10006;</div><!-- close button-->
-             <h2>Popup</h2> <!-- title food the popup-->
-            iyfkuyfkujyfkjftjfjgffhgfyufkufkjufkufkjfkjgfjhgfjhg
-        </div>
-    </div>
+  
 
 
-    <button class="button">Show</button>
 
-    <div id="myCarousel" class="carousel slide" data-ride="carousel" style="overflow: hidden;
+  <div id="myCarousel" class="carousel slide" data-ride="carousel" style="overflow: hidden;
         overflow-x:hidden;
         overflow-y: hidden;">
-      <!-- Indicators -->
       <ol class="carousel-indicators" style="overflow: hidden;">
         <li data-target="#myCarousel" data-slide-to="0" class="active" data-interval="4000"></li>
         <li data-target="#myCarousel" data-slide-to="1" data-interval="4000"></li>
@@ -192,53 +142,26 @@ $('.close').click(function () {
         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
-    </div>
+  </div>
 
-</div>
-<!-- <a class="carousel-control left" href="#myCarousel" data-slide = "prev"></a>
 
-<span class ="icon-prev"></span>
 
-<a class="carousel-control right" href="#myCarousel" data-slide = "next"></a>
+  <!-- ANGULAR DYNAMIC CONTENT -->
+  <div id="mainBody" style="text-align: ;
+      color: navy;
+      background: rgba(160, 36, 39, 0.7);
+      padding: 40px 40px 40px 40px; 
+      width: 1000px;
+      position :absolute;
+      left: 20%;
+      border-radius: 50px">
+          <div ng-view></div>
+  </div>
 
-<span class ="icon-next"></span> -->
-</div>
+  <br>
+  <br>
 
-<!--<div id="nav">
-    <div id="nav_wrapper">
-       <ul style="   position: relative; width: 1700px;">
-            <li style="background-color: rgba(0, 157, 226, 0);"> <a href="#home"><button><img id="ok" src="images/logo.png"></button></a></li>
-            <li style="background-color: rgba(0, 157, 226, 0);" ><a href="#flights"><button>View flights</button></a>
-            </li>
-            <li style="background-color: rgba(0, 157, 226, 0);"> <a href="#trackflight"><button>Track A Flight</button></a>
-            </li>
-            <li style="background-color: rgba(0, 157, 226, 0);"><a href="#boarding"><button>Boarding</button></a>
-            </li>
-
-            <li style="background-color: rgba(0, 157, 226, 0);">
-               <input type="text" name="username" style="
-          border: 2px solid #A4697C;
-          border-radius: 40px;
-          height: 28px;
-          width: 206px;
-        "><button>Search</button>
-            </li>
-
-        </ul>
-    </div>
-</div> -->
-
-<div>
-
-<!-- ANGULAR DYNAMIC CONTENT -->
-<div id="mainBody">
-<div ng-view></div>
-</div>
-
-<br>
-<br>
-
-   <footer class="site-footer"   >
+  <footer class="site-footer"   >
                 <div class="row">
                     <div class="col-md-12">
                         <nav class="footer-nav clearfix">
@@ -257,6 +180,5 @@ $('.close').click(function () {
                 </div> <!-- /.row -->
         </footer> <!-- /.site-footer -->
 </section>
-</div>
 </body>
 </html>

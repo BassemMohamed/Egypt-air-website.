@@ -77,10 +77,8 @@ font-weight: bolder;
 }
 
 #nav {
-      height: 120px;
-      background: transparent;
-
-;
+      height: 150px;
+      background: black;
 
 
 
@@ -240,6 +238,9 @@ vertical-align: text-top;
 .ps-top-to-bottom:after {
   right: -3px;
 }
+#myCarousel {
+  padding-bottom: 30px;
+}
 
 
 footer {
@@ -329,14 +330,17 @@ margin-right: 40px
 #viewflights h1
 {
   text-align: center;
-  color: red;
+  color: white;
+  box-shadow: rgba(auto);
   font-size: 60px;
 }
 
 #viewflights div
 {
-  text-align: center;
-  color: navy;
+  color: rgb(201, 180, 164);
+  font-size: 20px;
+  display: table-cell;
+  
 }
 
 /*-------------------------------------TESTING-----------------------------------*/
@@ -387,4 +391,225 @@ margin-right: 40px
     font-weight:bolder;
     border-radius:10px;
     background:silver;
+}
+overlay {
+    position:absolute;
+    display:none;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    background:rgba(0, 0, 0, 0.8);
+    z-index:9999;
+}
+.close {
+    position:absolute;
+    top:-40px;
+    right:-5px;
+    width:25px;
+    height:25px;
+    cursor:pointer;
+    color: #fff;
+    display: inline-block;
+}
+.popup {
+    position:absolute;
+    width:50%;
+    height:50%;
+    top:25%;
+    left:25%;
+    text-align:center;
+    border-radius: 10px;
+    background:rgb(240,240,240);
+    box-shadow: 0px 0px 10px 0px black;
+}
+.popup h2 {
+    font-size:15px;
+    height:50px;
+    line-height:50px;
+    color:#fff;
+    background:hotpink;
+    border-radius:10px 10px 0px 0px;
+}
+
+.button {
+    width:50px;
+    height:50px;
+    color:#fff;
+    font-weight:bolder;
+    border-radius:10px;
+    background:silver;
+}
+
+.wrapper{
+  background-color: white;
+  border-width: 10px;
+  border-color: black;
+  padding: 10px;
+}
+
+#container {
+width:900px; margin:0 auto;
+background-color: white;
+border-width: 10px;
+border-color: black;
+border-radius: 25px 25px 25px 25px;
+}
+
+form label {
+display:inline-block; width:140px;
+}
+
+.flightlist {
+  background: #EEE8D5;
+  width: 35%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border-radius: 10px 10px 10px 10px;
+  opacity: .95;
+  z-index: 10;
+}
+
+.flightlist ul {
+  margin: 0;
+  padding: 0;
+  background: #FDF6E3;
+}
+
+.flightlist li {
+  margin: 0;
+  padding: 10px 10px 0 10px;
+  height:92px;
+  border-bottom: 1px dotted black;
+}
+
+.flightlist a {
+  display: block;
+  text-decoration: none;
+}
+
+.flightlist li:hover {
+  background: #FDF6E3;
+  height:92px;
+}
+
+.flight img {
+  display: block;
+  float: left;
+  width: 60px;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.flight info {
+  display: block;
+  float: left;
+  padding-left: 120px !important;
+}
+
+.flight:last-child {
+  border-bottom:none;
+}
+
+.flightinfo {
+  font-size: 1.1em;
+  line-height: 160%;
+  background: #EEE8D5;
+  color: #0F4150;
+  width: 90%;
+  min-width: 320px;
+  max-width: 620px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 20px 30px;
+  border-radius: 10px;
+  z-index: 20;
+}
+
+.flightinfo h1{
+  font-size: 1.8em;
+  margin-bottom: 0;
+}
+
+.flightinfo img {
+  width: 40%;
+  max-width: 130px;
+  border-radius: 20px;
+}
+
+.flightinfo .btn {
+
+}
+ul{
+  list-style-type: none;
+  padding-left: 7;
+}
+.inside div{
+   margin-left: 40%;
+}
+
+.roundcont {
+overflow-y:scroll;
+margin : 10px;
+width : 98%;
+height: 25%;
+background : #E9DDC9;
+color : #333;
+}
+
+.roundsomething{
+  width : 98%;
+  height: 10.9%;
+  background : #E9DDC9;
+  color : #333;
+}
+li.x {
+  font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+  border-bottom: 1px solid #ccc;
+}
+
+li.x:last-child {
+  border: none;
+}
+
+li.x a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  width: 200px;
+
+  -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+  transition: font-size 0.3s ease, background-color 0.3s ease;
+}
+
+li.x a:hover {
+  font-size: 30px;
+  background: #f6f6f6;
+}
+#col1 {
+float : left;
+width : 20%;
+margin-bottom : 1em;
+border-right : 0px solid #eee;
+padding-right : 3%;
+}
+#col2 {
+float : left;
+width : 33%;
+margin-left : 3%;
+margin-bottom : 1em;
+border-right : 0px solid #eee;
+padding-right : 3%;
+}
+#col3 {
+float : left;
+width : 27%;
+margin-left : 4%;
+margin-bottom : 1em;
 }
