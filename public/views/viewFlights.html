@@ -2,7 +2,6 @@
 <html>
 <head>
 
-	<head>
 		<link rel="stylesheet" href="../css/jquery-ui.css">
 		<script src="../libs/jquery.min.js"></script>
 		<script src="../libs/jquery-ui.min.js"></script>
@@ -17,7 +16,6 @@
 	</head>
 
 
-</head>
 <body>
 
 <div id="viewflights" ng-controller="flightsController">
@@ -81,6 +79,7 @@
 
 </div>
 <br><br><br>
+<div class="roundcont" style="">
 <ul class="flightlist">
 	<li class="flight cf">
 			<div><img src="../images/p.png"></img></div>
@@ -118,6 +117,13 @@
 		<input type="button" name="book" value="Book"  style="margin-left: 40%;"></div>
 	</li>
 </ul>
+</div>
+<script>
+jQuery(function ($) { // First argument is the jQuery object
+    // Do stuff to the DOM
+    $('body').append('<p>Hello World!</p>');
+});
+</script>
 </body>
 
 </html>
