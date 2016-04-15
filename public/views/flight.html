@@ -1,59 +1,46 @@
 <!DOCTYPE html>
+
 <div id="flight" ng-controller="flightController">
 
-<h2  style="font-size: 20px; text-align: center; "> Flight </h2>
-
-<table>
-<tr>
-<td>
-	<div style="font-size: 20px; text-align: left; margin-bottom: 80px">    From:
-		<label  name ="from" style="margin-right: 400px;"for=""></label> </div>
-</td>
-<td>
-	<div style="font-size: 20px; text-align: right; margin-bottom: 80px">    to:
-		<label  name ="to" style="margin-right: 400px;"for=""></label> </div>
-</td>
-</tr>
-</table>
-
-<h1></h1>
-
-<table>
-<tr>
-<td>
-	<div style="font-size: 20px; text-align: left; margin-bottom: 80px">    Departure Time:
-		<label  name ="departure" style="margin-right: 400px;"for=""></label> </div>
-</td>
-<td>
-	<div style="font-size: 20px; text-align: right; margin-bottom: 80px">    Arrival Time :
-		<label  name ="arrival" style="margin-right: 400px;"for=""></label> </div>
-</td>
-</tr>
-</table>
-
-
-<table>
-<tr>
-<td>
-	<div style="font-size: 20px; text-align: left; margin-bottom: 80px">    Airplane Model :
-		<label  name ="model" style="margin-left: 400px;" for=""></label> </div>
-</td>
-<td>
-	<div style="font-size: 20px; text-align: right; margin-bottom: 80px">    Capacity :
-		<label  name ="capacity" style="margin-right: 400px;"for=""></label> <p></p>
-			<div style="font-size: 20px; text-align: right; margin-bottom: 80px">    Duration :
-				<label  name ="duration" style="margin-right: 400px;"for=""></label>
-
-		</div>
-</td>
-</tr>
-</table>
-
-<p>
-
-</p>
-
-<div class="" style="font-size: 20px; text-align: center; margin-bottom: 80px">     Seat Map
-
+<div class="roundcont" style="">
+	<ul class="flightlist">
+		<li class="flight cf">
+			<div><img src="../images/p.png"></img></div>
+			<div class="inside" style="margin-left: 40%;">Flight-815</div>
+			<div class="inside" style="margin-left: 40%;">Cairo - Berlin</div>
+			<div style="margin-left: 40%;">8:45 - 12:45
+			<input type="button" name="book" value="Book"  style="margin-left: 40%;"></div>
+		</li>
+		<li class="flight cf">
+			<img src="../images/p.png"></img>
+			<div class="inside" style="margin-left: 40%;">Flight-223</div>
+			<div class="inside" style="margin-left: 40%;">Paris - Cairo</div>
+			<div style="margin-left: 40%;">10:30 - 12:45
+			<input type="button" name="book" value="Book"  style="margin-left: 40%;"></div>
+		</li>
+		<li class="flight cf">
+			<img src="../images/p.png"></img>
+			<div class="inside" style="margin-left: 40%;">Flight-619</div>
+			<div class="inside" style="margin-left: 40%;">Cairo - Los Angeles</div>
+			<div style="margin-left: 40%;">8:15 - 17:20
+			<input type="button" name="book" value="Book"  style="margin-left: 40%;"></div>
+		</li>
+		<li class="flight cf">
+			<img src="../images/p.png"></img>
+			<div class="inside" style="margin-left: 40%;">Flight-815</div>
+			<div class="inside" style="margin-left: 40%;">Berlin - Cairo</div>
+			<div style="margin-left: 40%;">16:30 - 20:30
+			<input type="button" name="book" value="Book"  style="margin-left: 40%;"></div>
+		</li>
+		<li class="flight cf">
+			<img src="../images/p.png"></img>
+			<div class="inside" style="margin-left: 40%;">Flight-283</div>
+			<div class="inside" style="margin-left: 40%;">Cairo - Kuala Lumpur</div>
+			<div style="margin-left: 40%;">8:45 - 12:45
+			<input type="button" name="book" value="Book"  style="margin-left: 40%;"></div>
+		</li>
+	</ul>
 </div>
+
+
 </div>

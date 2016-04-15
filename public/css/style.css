@@ -314,7 +314,7 @@ text-align: center;
 
 #trackFlight h1
 {
-  color: red;
+  color: white;
   font-size: 60px;
   text-align: center;
 }
@@ -329,14 +329,16 @@ margin-right: 40px
 #viewflights h1
 {
   text-align: center;
-  color: red;
+  color: white;
+  box-shadow: rgba(auto);
   font-size: 60px;
 }
 
 #viewflights div
 {
-  text-align: center;
-  color: navy;
+  text-align: left;
+  color: rgb(201, 180, 164);
+  font-size: 20
 }
 
 /*-------------------------------------TESTING-----------------------------------*/
@@ -497,4 +499,67 @@ ul{
 }
 .inside div{
    margin-left: 40%;
+}
+
+.roundcont {
+overflow-y:scroll;
+margin : 10px;
+width : 98%;
+height: 25%;
+background : #E9DDC9;
+color : #333;
+}
+
+.roundsomething{
+  width : 98%;
+  height: 10.9%;
+  background : #E9DDC9;
+  color : #333;
+}
+li.x {
+  font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+  border-bottom: 1px solid #ccc;
+}
+
+li.x:last-child {
+  border: none;
+}
+
+li.x a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  width: 200px;
+
+  -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+  transition: font-size 0.3s ease, background-color 0.3s ease;
+}
+
+li.x a:hover {
+  font-size: 30px;
+  background: #f6f6f6;
+}
+#col1 {
+float : left;
+width : 20%;
+margin-bottom : 1em;
+border-right : 0px solid #eee;
+padding-right : 3%;
+}
+#col2 {
+float : left;
+width : 33%;
+margin-left : 3%;
+margin-bottom : 1em;
+border-right : 0px solid #eee;
+padding-right : 3%;
+}
+#col3 {
+float : left;
+width : 27%;
+margin-left : 4%;
+margin-bottom : 1em;
 }
