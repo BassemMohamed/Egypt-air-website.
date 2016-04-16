@@ -1,15 +1,15 @@
 // Main Controller
-myApp.controller('mainController',function mainController($scope) 
+myApp.controller('mainController',function mainController($scope)
 {
 
 });
 // Home Controller
-myApp.controller('homeController',function homeController($scope) 
+myApp.controller('homeController',function homeController($scope)
 {
 
 });
 // viewFlights Controller
-myApp.controller('flightsController',function flightsController($scope, $http) 
+myApp.controller('flightsController',function flightsController($scope, $http)
 {
 	$http({
 	    method: 'GET',
@@ -25,20 +25,20 @@ myApp.controller('flightsController',function flightsController($scope, $http)
 myApp.controller('trackFlightController',function trackFlightController($scope) 
 {
 
+
 });
 // Boarding Controller
-myApp.controller('boardingController',function boardingController($scope ) 
+myApp.controller('boardingController',function boardingController($scope )
 {
 
 });
 // About Controller
-myApp.controller('aboutController',function aboutController($scope) 
+myApp.controller('aboutController',function aboutController($scope)
 {
 
 });
 // Confirm Controller
-myApp.controller('confirmController',function confirmController($scope) 
+myApp.controller('confirmController',function confirmController($scope)
 {
 
 });
-
