@@ -1,0 +1,583 @@
+body {
+    font-family: -apple-system, San Francisco Display, Helvetica Neue, Helvetica, Segoe UI, Verdana, Arial, sans-serif;
+    background-color: #1c1c1c
+}
+.thing.odd {
+    background-color: #1f1f1f
+}
+.link {
+    margin-bottom: 0px
+}
+.expando-button {
+    background-color: transparent
+}
+.expando-button.selftext.collapsed,
+.expando-button.video.collapsed {
+    background-image: url("//a.thumbs.redditmedia.com/zJNjXaktrIyJMXaNnPn13-Dk7r34Onog_v-ao-6Ka_0.png")
+}
+.expando-button.selftext.expanded,
+.expando-button.video.expanded {
+    background-image: url("//b.thumbs.redditmedia.com/qDGgKnjqYc3sdOiGC-bY_EgIk1hJkC9w7ug9W4xxfVw.png")
+}
+.expando-button.selftext.collapsed:hover,
+.expando-button.video.collapsed:hover {
+    background-image: url("//b.thumbs.redditmedia.com/YCLSPyauss_x01MZnbIUdoX0SWj1N_-6FYj3PWXnOss.png")
+}
+.expando-button.selftext.expanded:hover,
+.expando-button.video.expanded:hover {
+    background-image: url("//b.thumbs.redditmedia.com/CgkASgpYoVsnPSz_l9VHlNkrOIlowFiU1eKXkH9mo5E.png")
+}
+.expando-button.selftext.collapsed,
+.expando-button.video.collapsed,
+.expando-button.selftext.expanded,
+.expando-button.video.expanded,
+.expando-button.selftext.collapsed:hover,
+.expando-button.video.collapsed:hover,
+.expando-button.selftext.expanded:hover,
+.expando-button.video.expanded:hover {
+    background-position: 0px 0px
+}
+.linkinfo {
+    background-color: #2e2e2e;
+    border: 0px;
+    color: #b3b3b3
+}
+.link .score.likes {
+    color: #b3992c
+}
+.link .score.dislikes {
+    color: #1f9985
+}
+.usertext.grayed .usertext-body,
+.usertext.border .usertext-body {
+    background-color: transparent
+}
+.side,
+.sidebox .spacer,
+.md code,
+.md pre {
+    background-color: #2e2e2e
+}
+.md code,
+.md pre {
+    border: 1px solid #4c4c4c
+}
+.side {
+    padding-left: 15px
+}
+.stickied {
+    padding: 15px
+}
+.thing.stickied.link a.title,
+body:not(.comments-page) .stickied .tagline,
+.tagline .stickied-tagline,
+.search-result-meta .stickied-tagline,
+.tagline .moderator,
+.green,
+.search-result-meta .moderator {
+    font-weight: bold;
+    color: #b3992c!important
+}
+.thing .title:visited,
+.thing.visited .title,
+.thing .title {
+    color: #1f9985
+}
+.thing {
+    border-bottom: 1px solid #b3992c;
+    padding: 15px
+}
+.titlebox form.toggle,
+.leavemoderator,
+.icon-menu a {
+    background-color: transparent
+}
+.md,
+p,
+.md blockquote,
+.md del,
+.titlebox form.toggle,
+.leavemoderator,
+span.subscribers,
+.sidebox .subtitle {
+    color: #b3b3b3
+}
+a,
+.search-result-meta a,
+.md a,
+.titlebox h1 a,
+.search-result-meta .submitter,
+.search-result-meta {
+    color: #1f9985
+}
+.entry .buttons li a,
+.link .score,
+.domain a {
+    color: #737373
+}
+.tagline a,
+.tagline .submitter,
+.tagline {
+    color: #737373
+}
+.md .-headers,
+.md h1,
+.md h2,
+.md h3,
+.md h4,
+.md h5,
+.md h6 {
+    color: #b3992c
+}
+.md hr {
+    background-color: #b3992c
+}
+div.midcol.likes,
+body>.content .link.compressed .midcol {
+    width: 19px
+}
+.link .usertext-body .md,
+.linkflair .linkflairlabel {
+    background-color: #2b2b2b;
+    border: 1px solid #737373
+}
+.link .md pre {
+    background-color: #2b2b2b
+}
+.sidecontentbox .content {
+    border: 1px solid #b3992c
+}
+.sidecontentbox .title h1 {
+    color: #b3992c
+}
+.side .md h1,
+.side .md h2 {
+    color: #b3992c
+}
+.morelink {
+    color: #2e2e2e;
+    display: block;
+    text-align: center;
+    position: relative;
+    border: 1px solid #2e2e2e;
+    background: #b3992c;
+    font-weight: bold;
+    letter-spacing: -.4px
+}
+.morelink a {
+    color: #2e2e2e
+}
+.morelink a:hover {
+    color: #b3992c
+}
+.morelink:hover {
+    color: #b3992c;
+    background: #2e2e2e;
+    border: 1px solid #b3992c
+}
+#search input[type=text],
+.pretty-form input[type=text],
+.pretty-form textarea,
+.pretty-form input[type=password],
+.pretty-form input[type=number],
+textarea,
+.linkinfo .shortlink input {
+    background-color: #b3b3b3;
+    color: #2b2b2b;
+    border: 1px solid #2b2b2b
+}
+.flair,
+.linkflairlabel {
+    color: #737373
+}
+.comment .midcol {
+    width: 19px
+}
+.arrow {
+    height: 17px;
+    width: 15px;
+    margin: 2px 0px 0px 3px
+}
+.tabmenu li.selected a {
+    color: orangered!important;
+    background-color: #2e2e2e
+}
+code {
+    font-family: courier new, courier
+}
+#header {
+    background: #000;
+    background-image: url("//b.thumbs.redditmedia.com/W9szwPZax2EJ6OoAKKiHET8NOEbQzc9NScH37ql7tWM.png"), url("//b.thumbs.redditmedia.com/T0n0CxxxwyxAIvrIx4WOB-KqvVgYcnJOLQsVY4xEbVQ.jpg");
+    background-position: center center, center center;
+    border: none, none;
+    background-repeat: no-repeat, no-repeat;
+    height: 200px
+}
+#jumpToContent {
+    color: transparent
+}
+#header:after {
+    position: absolute;
+    top: 165px;
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    content: " ";
+    z-index: -1
+}
+#header-bottom-left {
+    bottom: 0;
+    height: 20px;
+    left: 90px;
+    position: absolute;
+    font-weight: 700;
+    color: #FFF
+}
+#header-bottom-left a {
+    color: #FFF;
+    font-variant: normal
+}
+#header-img {
+    position: absolute;
+    bottom: -5px;
+    left: -80px
+}
+#header-bottom-left ul.tabmenu li a[href$="/ads/"] {
+    display: none!important
+}
+.tabmenu #viewImagesButton {
+    display: none!important
+}
+.tabmenu.formtab .selected a {
+    color: white!important;
+    font-size: 130%;
+    background-color: #5f99cf;
+    border: 2px solid #5F99CF!important
+}
+#header-bottom-right {
+    background-color: rgba(255, 255, 255, 0.8);
+    top: 180px!important;
+    right: 20px;
+    padding: 3px!important;
+    font-weight: 700;
+    font-size: 11px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px
+}
+.pagename {
+    position: relative;
+    top: -8px;
+    margin-right: 80px;
+    margin-left: -13px
+}
+.pagename a {
+    color: #369;
+    font-size: 16px
+}
+#sr-header-area {
+    background-color: #000;
+    background-color: rgba(255, 255, 255, 0.8)!important;
+    border: none;
+    color: #fff;
+    font-weight: 400;
+    width: 100%;
+    z-index: 9999
+}
+.sr-bar a,
+.dropdown.srdrop .selected,
+.drop-choices a.choice {
+    color: #369;
+    font-weight: bold;
+    text-transform: none
+}
+.drop-choices {
+    background-color: rgba(255, 255, 255, 0.9)!important
+}
+.tabmenu li a {
+    padding: 2px 6px 0 6px;
+    background-color: transparent
+}
+.tabmenu li.selected a {
+    color: orangered;
+    z-index: 100;
+    border: none
+}
+#search input[type=text] {
+    border: 1px solid #369
+}
+.infobar {
+    background: #fff;
+    border: 1px solid #369
+}
+.titlebox h1 a {
+    width: 100%;
+    text-align: center;
+    font-size: 25px
+}
+.titlebox .fancy-toggle-button {
+    margin-top: 2px
+}
+.formtabs-content {
+    border-top: 4px solid #336699
+}
+.infobar {
+    background-color: #f6e69f!important;
+    border-color: #ffa500!important
+}
+.tabmenu {
+    font-size: 13px
+}
+.tabmenu.formtab .selected a {
+    color: white!important;
+    background-color: #369;
+    border: 2px solid #369!important
+}
+.roundfield {
+    width: 500px;
+    background-color: #ECF3F9;
+    border: 1px solid #369;
+    border-radius: 0;
+    padding: 5px 10px 10px 10px;
+    font-size: large;
+    color: #369;
+    font-weight: 500
+}
+.titlebox .fancy-toggle-button .remove {
+    background-color: #ef5350!important;
+    padding: 4px 5px 4px 5px;
+    border: none;
+    background-image: none
+}
+.titlebox .fancy-toggle-button .add {
+    background-color: #66BB6A!important;
+    padding: 4px 5px 4px 5px;
+    border: none;
+    background-image: none
+}
+.titlebox .RESDashboardToggle,
+.titlebox .RESshortcut,
+.titlebox .RESshortcutside {
+    background-color: #66BB6A!important;
+    padding: 4px 5px 4px 5px;
+    border: none;
+    background-image: none
+}
+.morelink .nub {
+    display: none
+}
+.md hr {
+    height: 2px
+}
+.subscribers {
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center
+}
+.users-online:before {
+    display: none
+}
+.sidecontentbox .content {
+    margin: 0!important;
+    padding: 5px!important;
+    font-size: larger;
+    list-style: none
+}
+.flairselector h2 {
+    background: none
+}
+.flairselector form {
+    border-top: solid 1px #369
+}
+.flairselector.drop-choices.active {
+    border: solid 1px #369
+}
+.stickied {
+    margin-right: 300px
+}
+div.content {
+    font-size: 12px
+}
+.thumbnail.self {
+    display: none
+}
+.link .title {
+    font-size: medium;
+    font-weight: normal;
+    margin-bottom: 1px
+}
+.link.last-clicked {
+    border: none;
+    border-bottom: 1px solid #737373!important
+}
+.thing .title {
+    outline: none;
+    margin-right: .4em;
+    padding: 0px;
+    overflow: hidden
+}
+.entry .buttons li a {
+    font-weight: bold;
+    padding: 0 1px
+}
+.tagline {
+    padding-top: 2px
+}
+.linefield {
+    background-color: #FFF
+}
+.linefield textarea,
+.linefield input[type=text],
+.linefield input[type=password] {
+    border: 1px solid #369
+}
+.linefield .title {
+    color: #369
+}
+.arrow.up {
+    background: url("//b.thumbs.redditmedia.com/ObzstBtDKUY9au8GzSzOHXJGW3PK8Bcttc-KITUEX-c.png") 0 0
+}
+.arrow.upmod {
+    background: url("//a.thumbs.redditmedia.com/P7QysZuhnfq_LdKvjI_DptcARDstV9R7FSNaJHwayZ4.png") 0 0
+}
+.arrow.down {
+    background: url("//b.thumbs.redditmedia.com/XlgBq8om4W6QBTEZR9s1UQqS5AYAeQhvwQWpVeoCgYM.png") 0 0
+}
+.arrow.downmod {
+    background: url("//b.thumbs.redditmedia.com/H6RtQkM1P1q-p2DMu6zpgXlMYSgnXelTrsUufiOHfGA.png") 0 0
+}
+.over18 a.title:link,
+.over18 a.title:visited,
+body:not(.comments-page) .over18 .link .tagline,
+body:not(.comments-page) .over18 .tagline,
+body:not(.comments-page) .over18 .entry .buttons li a,
+body:not(.comments-page) .over18 .entry .buttons li+li {
+    color: #D10023!important;
+    padding-bottom: 0!important
+}
+.flair-mod {
+    background: #228822;
+    color: #228822
+}
+.linkflair .linkflairlabel {
+    text-align: center;
+    border-radius: 3px;
+    padding: 2px 5px 2px 5px;
+    border: none;
+    overflow: visible;
+    font-size: 10px!important
+}
+.linkflair-sticky .linkflairlabel {
+    border: 1px solid #4CAF50;
+    color: #4CAF50;
+    background-color: #FFF
+}
+.linkflair-nsfw .linkflairlabel {
+    border: 1px solid #D10023;
+    color: #D10023;
+    background-color: inherit
+}
+.flair {
+    background: url("//b.thumbs.redditmedia.com/M6npnwNlRXqY9LZfx8uEAsxC8tOIgGohC-1OoeNoCec.png") no-repeat -9999px;
+    border: 0;
+    padding: 0
+}
+.flair-ata {
+    width: 50px;
+    height: 50px;
+    background-position: 0 0
+}
+.flair-ayy {
+    width: 50px;
+    height: 50px;
+    background-position: 0 -50px
+}
+.flair-bb0 {
+    width: 50px;
+    height: 50px;
+    background-position: 0 -100px
+}
+.flair-cas {
+    width: 50px;
+    height: 50px;
+    background-position: 0 -150px
+}
+.flair-ckt {
+    width: 50px;
+    height: 50px;
+    background-position: 0 -200px
+}
+.flair-dlp {
+    width: 50px;
+    height: 50px;
+    background-position: 0 -250px
+}
+.flair-ert {
+    width: 50px;
+    height: 50px;
+    background-position: 0 -300px
+}
+.flair-hel {
+    width: 50px;
+    height: 50px;
+    background-position: 0 -350px
+}
+.flair-kyl {
+    width: 50px;
+    height: 50px;
+    background-position: 0 -400px
+}
+.flair-lip {
+    width: 50px;
+    height: 50px;
+    background-position: 0 -450px
+}
+.flair-mac {
+    width: 50px;
+    height: 50px;
+    background-position: 0 -500px
+}
+.flair-piz {
+    width: 50px;
+    height: 50px;
+    background-position: 0 -550px
+}
+.flair-plm {
+    width: 50px;
+    height: 50px;
+    background-position: 0 -600px
+}
+.flair-pps {
+    width: 50px;
+    height: 50px;
+    background-position: 0 -650px
+}
+.flair-pyr {
+    width: 50px;
+    height: 50px;
+    background-position: 0 -700px
+}
+.flair-sga {
+    width: 50px;
+    height: 50px;
+    background-position: 0 -750px
+}
+.flair-shn {
+    width: 50px;
+    height: 50px;
+    background-position: 0 -800px
+}
+.flair-skl {
+    width: 50px;
+    height: 50px;
+    background-position: 0 -850px
+}
+.flair-slm {
+    width: 50px;
+    height: 50px;
+    background-position: 0 -900px
+}
+.flair-win {
+    width: 50px;
+    height: 50px;
+    background-position: 0 -950px
+}
