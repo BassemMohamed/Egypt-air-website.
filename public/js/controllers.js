@@ -1,15 +1,7 @@
 // Main Controller
-myApp.controller('mainController',function mainController($scope, $http) 
+myApp.controller('mainController',function mainController($scope) 
 {
-	$http({
-	    method: 'GET',
-	    url: '/api/quote'
-	}).then(function successCallback(response) {
-	    $scope.quotes = response;
-	    console.log("Done");
-	}, function errorCallback(response) {
-	    console.log(response);
-	});
+
 });
 // Home Controller
 myApp.controller('homeController',function homeController($scope) 
@@ -17,14 +9,17 @@ myApp.controller('homeController',function homeController($scope)
 
 });
 // viewFlights Controller
-myApp.controller('flightsController',function flightsController($scope) 
+myApp.controller('flightsController',function flightsController($scope, $http) 
 {
-
-});
-// Flight Controller
-myApp.controller('flightsController',function flightsController($scope) 
-{
-
+	$http({
+	    method: 'GET',
+	    url: '/api/flights'
+	}).then(function successCallback(response) {
+	    $scope.flights = response.data;
+	    console.log("Done");
+	}, function errorCallback(response) {
+	    console.log(response);
+	});
 });
 // Track a flight Controller
 myApp.controller('trackFlightController',function trackFlightController($scope) 

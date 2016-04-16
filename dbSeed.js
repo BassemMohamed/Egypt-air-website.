@@ -34,6 +34,13 @@ exports.seed = function(callback) {
                 db.seed('flights',JSON.parse(data));
             });
 
+            fs.readFile('public/js/json/booking.json', 'utf8', function(err, data) {
+                if (err) throw err;
+                console.log("Data Retrieved from json");
+
+                db.seed('booking',JSON.parse(data));
+            });
+
             callback(true);
         }
     });

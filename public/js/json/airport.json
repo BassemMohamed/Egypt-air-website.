@@ -53,17 +53,6 @@
         "lat": "111.233333",
         "type": "airport",
         "size": "big"
-},
-{
-        "_id": "400",
-        "name": "Borg el Arab Airport",
-        "status": 1,
-        "country": "Egypt",
-        "continent": "OC",
-        "lon": "159.86667",
-        "lat": "111.233333",
-        "type": "airport",
-        "size": "big"
 }
 
 

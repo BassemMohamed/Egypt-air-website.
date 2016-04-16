@@ -9,14 +9,59 @@ module.exports = function(app)
         
         db.connect(function(cb)
         {
+            if(cb == true)
+            {
+                db.getFlights(function(content)
+                {
+                var jsonContent = JSON.parse(content);
+                res.send(jsonContent);
+                });
+            }   
+        });
+    });
+
+    app.get('/api/airports', function(req, res) {
+        
+        db.connect(function(cb)
+        {
         	if(cb == true)
         	{
-        		db.getFlights(function(content)
+        		db.getAirports(function(content)
 	        	{
 	        	var jsonContent = JSON.parse(content);
 	        	res.send(jsonContent);
 	        	});
         	}	
+        });
+    });
+
+    app.get('/api/airplanes', function(req, res) {
+        
+        db.connect(function(cb)
+        {
+            if(cb == true)
+            {
+                db.getAirplanes(function(content)
+                {
+                var jsonContent = JSON.parse(content);
+                res.send(jsonContent);
+                });
+            }   
+        });
+    });
+
+    app.get('/api/bookings', function(req, res) {
+        
+        db.connect(function(cb)
+        {
+            if(cb == true)
+            {
+                db.getBookings(function(content)
+                {
+                var jsonContent = JSON.parse(content);
+                res.send(jsonContent);
+                });
+            }   
         });
     });
 

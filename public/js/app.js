@@ -17,11 +17,6 @@ myApp.config(function($routeProvider) {
         controller: 'flightsController'
     });
 
-    $routeProvider.when('/flight', {
-        templateUrl: 'views/flight.html',
-        controller: 'flightController'
-    });
-
     $routeProvider.when('/trackflight', {
         templateUrl: 'views/trackFlight.html',
         controller: 'trackFlightController'
@@ -41,4 +36,7 @@ myApp.config(function($routeProvider) {
         templateUrl: 'views/about.html',
         controller: 'aboutController'
     });
+    // $routeProvider.otherwise({
+    // redirectTo: '/'
+    // });
 });

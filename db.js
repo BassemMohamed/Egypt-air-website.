@@ -26,23 +26,23 @@ exports.connect = function(cb)
 exports.seed = function(collectionName,data)
 {
   DB.collection(collectionName).insert(data, function(err, doc) {
-        console.log(data);
+        console.log("Data Seeded!");
     if(err) throw err;
   });
 }
 
-// Needs Tweaking Not At all done
 exports.getFlights = function(cb) {
-    var flights = DB.collection('flights').find().toArray(function(err, docs) {
+    var Flights = DB.collection('flights').find().toArray(function(err, docs) {
         var intCount = docs.length;
-        if (initCount = 0)
+        console.log("Found : " + intCount + " Flights");
+        if (intCount == 0)
         {
           console.log("Database Empty");
         }
         if (intCount > 0) {
             var strJson = "[";
             for (var i = 0; i < intCount;) {
-                strJson += strJson = '{"author": "' + docs[i].author + '","text": "' + docs[i].text + '"}';
+                strJson += strJson = '{"_id": "' + docs[i]._id + '","aircraftid": "' + docs[i].aircraftid + '","departuredate": "' + docs[i].departuredate + '","duration": "' + docs[i].duration + '","arrivaldate": "' + docs[i].arrivaldate + '","originid": "' + docs[i].originid + '","destinationid": "' + docs[i].destinationid + '","seatmap": "' + docs[i].seatmap + '"}';
                 i = i + 1;
                 if (i < intCount) {
                     strJson += ',';
@@ -50,7 +50,79 @@ exports.getFlights = function(cb) {
             }
             strJson += ']';
             cb(strJson);
-            console.log("Quotes Retrived from DB");
+            console.log("Flights Retrived from DB");
+        }
+    });
+}
+
+exports.getAirports = function(cb) {
+    var airports = DB.collection('airport').find().toArray(function(err, docs) {
+        var intCount = docs.length;
+        console.log("Found : " + intCount + " Airports");
+        if (intCount == 0)
+        {
+          console.log("Database Empty");
+        }
+        if (intCount > 0) {
+            var strJson = "[";
+            for (var i = 0; i < intCount;) {
+                strJson += strJson = '{"_id": "' + docs[i]._id + '","name": "' + docs[i].name + '","status": "' + docs[i].status + '","country": "' + docs[i].country + '","continent": "' + docs[i].continent + '","lon": "' + docs[i].lon + '","lat": "' + docs[i].lat + '","type": "' + docs[i].type + '","size": "' + docs[i].size + '"}';
+                i = i + 1;
+                if (i < intCount) {
+                    strJson += ',';
+                }
+            }
+            strJson += ']';
+            cb(strJson);
+            console.log("Airports Retrived from DB");
+        }
+    });
+}
+
+exports.getAirplanes = function(cb) {
+    var airplanes = DB.collection('airplane').find().toArray(function(err, docs) {
+        var intCount = docs.length;
+        console.log("Found : " + intCount + " Airplanes");
+        if (intCount == 0)
+        {
+          console.log("Database Empty");
+        }
+        if (intCount > 0) {
+            var strJson = "[";
+            for (var i = 0; i < intCount;) {
+                strJson += strJson = '{"_id": "' + docs[i]._id + '","model": "' + docs[i].model + '","capacity": "' + docs[i].capacity + '","company": "' + docs[i].company + '","lon": "' + docs[i].lon + '","lat": "' + docs[i].lat + '","status": "' + docs[i].status + '","seatmap": "' + docs[i].seatmap + '"}';
+                i = i + 1;
+                if (i < intCount) {
+                    strJson += ',';
+                }
+            }
+            strJson += ']';
+            cb(strJson);
+            console.log("Airplanes Retrived from DB");
+        }
+    });
+}
+
+exports.getBookings = function(cb) {
+    var bookings = DB.collection('booking').find().toArray(function(err, docs) {
+        var intCount = docs.length;
+        console.log("Found : " + intCount + " Bookings");
+        if (intCount == 0)
+        {
+          console.log("Database Empty");
+        }
+        if (intCount > 0) {
+            var strJson = "[";
+            for (var i = 0; i < intCount;) {
+                strJson += strJson = '{"_id": "' + docs[i]._id + '","flightid": "' + docs[i].flightid + '","firstName": "' + docs[i].firstName + '","lastName": "' + docs[i].lastName + '","passport": "' + docs[i].passport + '","issuedate": "' + docs[i].issuedate + '","expirydate": "' + docs[i].expirydate + '","receiptnumber": "' + docs[i].receiptnumber + '"}';
+                i = i + 1;
+                if (i < intCount) {
+                    strJson += ',';
+                }
+            }
+            strJson += ']';
+            cb(strJson);
+            console.log("Bookings Retrived from DB");
         }
     });
 }

@@ -20,7 +20,10 @@ Team Members:
 6- Moustafa nagy
   mail:
   
-7- Ahmed Elnashar (4-1975)
-  mail: ahmed.e.elnashar@gmail.com
+7- Ahmad el nashar
+  mail: 
+  
+8- Mohamed El-beltagui (31-3420)
+   mail: mohamedelbeltagui14@gmail.com
 
 These team members are working to create a one-page responsive website to book, track and view flights from Egypt Airlines using the MEAN stack ( NodeJS , Angular , MongoDB ).
