@@ -105,9 +105,10 @@ module.exports = function(app)
 	});
 
     /* ROUND-TRIP SEARCH REST ENDPOINT */
-    app.get('/api/flights/search/:origin/:destination/:departingDate/returningDate/:class', function(req, res) {
+    app.get('/api/flights/search/:origin/:destination/:departingDate/:returningDate/:class', function(req, res) {
         // retrieve origin, destiantion, departingDate, returningDate, and class from req.params.{{origin | departingDate | ...}}
         // return an array of objects with this exact format
+        console.log("URL CALLED!!");
         return 
         [{
             "flightNumber"      : "SE2804",

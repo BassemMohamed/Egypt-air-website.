@@ -14,12 +14,12 @@ myApp.config(function($routeProvider) {
 
     $routeProvider.when('/flights', {
         templateUrl: 'views/viewFlights.html',
-        controller: 'flightsController'
+        controller: 'viewflightsController'
     });
 
     $routeProvider.when('/flight', {
         templateUrl: 'views/flight.html',
-        controller: 'flightController'
+        controller: 'flightsController'
     });
 
     $routeProvider.when('/trackflight', {
