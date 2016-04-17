@@ -1,18 +1,18 @@
 <div id="home" ng-controller="homeController" style="margin-left: 100px;">
   <div >
-  <div id="light" class="white_content">
+  <div id="light" class="white_content" style="height: 220px;">
       <button style="color: white"onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Close
       </button style="border-radius: 30px 30px 30px 30px;">
       <div>
           <p style="color: black; left:90%;">
-          <li style=""> <h2 style="color: navy; font-size: 20px;">E-mail: support@Egyptair.com</h2></li>
-          <li style=""> <h2 style="color: navy; font-size: 20px;">Hotline: (+02)2 635 7463</h2></li>
-          <li style=""> <h2 style="color: navy; font-size: 20px;">facebook: facebook.com/e.air</h2></li>
+          <ul style=""> <h2 style="color: navy; font-size: 20px;">E-mail: support@Egyptair.com</h2></ul>
+          <ul style=""> <h2 style="color: navy; font-size: 20px;">Hotline: (+02)2 635 7463</h2></ul>
+          <ul style=""> <h2 style="color: navy; font-size: 20px;">facebook: facebook.com/e.air</h2></ul>
           </p>
       </div>
   </div>
 
-  <div id="fade" class="black_overlay"> 
+  <div id="fade" class="black_overlay">
   </div>
 
   <div id="col1" class = "sidebar" style="rgba(0, 0, 0, 1); position: relative;">
@@ -39,7 +39,7 @@
     <div class="roundwelcome">
       <h2 style="color: navy; margin-left:20%;">Welcome to Egyptair</h2>
       <div>
-        <img src="../images/egyptair.jpg" style="padding-left: 10px;">
+        <img src="../images/egyptair.jpg" style="padding-left: 10px; margin-left:6%;">
       </div>
       <blockquote >"Our mission is to create value for our customers, employees, owners & stakeholders"
       </blockquote>
@@ -66,39 +66,28 @@
       </div>
     </div>
   </div>
-   <div class="roundc" style="position: top; background: rgba(160, 36, 39, 0.7); height: 30%; width: 70%; left: 15%; clear: both;">
-    <div class="roundc" style="width: 80%; height: 40%; left: 10%;">
-      <div class="divison" id="firstDivistion">
-        <h2 style="font-size:15 ; color: navy ;">Limited Offer</h2>  
-        <h style="">25% off all tickets to Sharm el-Sheikh!</h>  
-        <img src="../images/ss.jpg" style="border-radius: 25px 15px 15px 15px ;">
-        <br>
-        <br>
-        <button type="button" name="learn more" style="margin-left: 40%;">
-        Learn more
-        </button> 
-      </div>
-    </div>
-    <div class="roundc" style="width: 80%; height: 40%; left: 10%;">
-      <div class="divison" id="firstDivistion">
-        <img src="../images/lol.jpg" style="border-radius: 25px 0px 15px 15px ;">
-      </div>
-      <div class="divison" id="secondDivistion">
-        <div style="margin-left: 29%;">
-          <h2 style="font-size:30 ; color: navy">Announcement</h2>
-          <br>
-          <div>
-            <h>style="margin-left: 20%;" >Flights to sweden postponed due to storm</h>
-          </div>
-          <br>
-          <br>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-
-
- 
+  <div class="roundc" style="position: top; background: rgba(233, 221, 201, 0.6); height: 30%; width: 70%; left: 15%;">
+ <div class="roundc" style="width: 80%; height: 40%; left: 10%; top: 5%; ">
+   <div id="firstDivistion" class="division"><img src="../images/ss.jpg" style="border-radius: 25px 0 15px 15px;"></img></div>
+   <div id="secondDivistion" class="division">
+     <div style="margin-left: 29%;" ><h2 style="font-size:30; color: navy">Limited Offer</h2></div>
+     <div style="margin-left: 30%;" >25% off all tickets to Sharm el-Sheikh!</div>
+     <br>
+     <button type="button" name="learn more" style="margin-left: 40%;">Learn More</button>
+   </div>
+ </div>
+   <div class="roundc" style="width: 80%; height: 40%; left: 10%; top: 10%;">
+     <div id="firstDivistion" class="division"><img src="../images/lol.jpg" style="border-radius: 25px 0 15px 15px;"></img></div>
+     <div id="secondDivistion" class="division">
+       <div style="margin-left: 29%;" ><h2 style="font-size:30; color: navy">Announcement</h2></div>
+       <br>
+       <div style="margin-left: 30%; margin-right: 2px;" >Flights to sweden postponed due to storm</div>
+       <br>
+     </div>
+   </div>
 </div>
+  </div>
 
+
+
+</div>

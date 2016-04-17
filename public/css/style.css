@@ -568,23 +568,17 @@ li.x a:hover {
 }
 #col1 {
 float : left;
-width : 20%;
+width : 20.5%;
 margin-bottom : 1em;
 border-right : 0px solid #eee;
 padding-right : 3%;
+height: auto;
 }
 
-#col11 {
-float : left;
-width : 20%;
-margin-bottom : 1em;
-border-right : 0px solid #eee;
-padding-right : 3%;
-}
 #col2 {
 float : left;
 width : 33%;
-margin-left : 3%;
+margin-left : 6%;
 margin-bottom : 1em;
 border-right : 0px solid #eee;
 padding-right : 3%;
@@ -639,6 +633,7 @@ margin-bottom : 1em;
     -ms-animation: fadein 1s; /* Internet Explorer */
      -o-animation: fadein 1s; /* Opera < 12.1 */
         animation: fadein 1s;
+
 
 }
 
@@ -708,3 +703,34 @@ body h2{
 
 form{
   margin: 0;
+}
+
+.payment{
+
+    display: none;
+}
+#payment{
+
+}
+
+
+#col11 {
+float : left;
+margin-bottom : 1em;
+border-right : 0px solid #eee;
+padding-right : 3%;
+width: 30%; height: 200px;
+background-color: rgba(160, 36, 39, 0.7);
+border-radius: 0px 15px 15px 0px;
+margin-left: -1%;
+}
+
+#col12 {
+width:35%;
+background: rgba(160, 36, 39, 0.7);
+border-radius: 15px 0px 15px 15px;
+float : left;
+margin-bottom : 1em;
+border-right : 0px solid #eee;
+padding-right : 3%;
+}
