@@ -55,6 +55,31 @@ exports.getFlights = function(cb) {
     });
 }
 
+exports.searchFlights = function(org,dest,dDate,rDate,cb) {
+    var Flights = DB.collection('flights').find({originid: org, destinationid: dest}).toArray(function(err, docs) {
+        var intCount = docs.length;
+        console.log("Found : " + intCount + " Flights");
+        if (intCount == 0)
+        {
+          console.log("Database Empty");
+          cb(false);
+        }
+        if (intCount > 0) {
+            var strJson = "[";
+            for (var i = 0; i < intCount;) {
+                strJson += strJson = '{"_id": "' + docs[i]._id + '","aircraftid": "' + docs[i].aircraftid + '","departuredate": "' + docs[i].departuredate + '","duration": "' + docs[i].duration + '","arrivaldate": "' + docs[i].arrivaldate + '","originid": "' + docs[i].originid + '","destinationid": "' + docs[i].destinationid + '","seatmap": "' + docs[i].seatmap + '"}';
+                i = i + 1;
+                if (i < intCount) {
+                    strJson += ',';
+                }
+            }
+            strJson += ']';
+            cb(strJson);
+            console.log("Flights Retrived from DB");
+        }
+    });
+}
+
 exports.getAirports = function(cb) {
     var airports = DB.collection('airport').find().toArray(function(err, docs) {
         var intCount = docs.length;

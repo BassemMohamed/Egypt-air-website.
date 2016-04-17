@@ -98,38 +98,33 @@ module.exports = function(app)
     /* Middleware */
 
     /* ROUND-TRIP SEARCH REST ENDPOINT */
-    app.get('/api/flights/search/:origin/:destination/:departingDate/:returningDate/:class', function(req, res) {
-        
+    app.get('/api/flights/search/:origin/:destination/:departingDate/:returningDate/:class', function(req, res) 
+    {
+        //console.log(req.params.class);
         // retrieve origin, destiantion, departingDate, returningDate, and class from req.params.{{origin | departingDate | ...}}
         // return an array of objects with this exact format
-        console.log("URL CALLED");
-        //console.log();
-        res.send(
-        [{
-            "flightNumber"      : "SE2804",
-            "aircraftType"      : "Boeing",
-            "aircraftModel"     : "747",
-            "departureDateTime" : "Tuesday, April 12, 2016 06:25 PM",
-            "arrivalDateTime"   : "Wednesday, April 13, 2016 12:25 AM",
-            "origin"            : "JFK",
-            "destination"       : "CAI",
-            "cost"              : "750",
-            "currency"          : "USD",
-            "class"             : "economy",
-            "Airline"           : "United"
-        },{
-            "flightNumber"      : "SE2805",
-            "aircraftType"      : "Boeing",
-            "aircraftModel"     : "747",
-            "departureDateTime" : "Friday, April 23, 2016 04:25 AM",
-            "arrivalDateTime"   : "Friday, April 23, 2016 03:25 PM",
-            "origin"            : "CAI",
-            "destination"       : "JFK",
-            "cost"              : "845",
-            "currency"          : "USD",
-            "class"             : "economy",
-            "Airline"           : "United"
-        }] );
+        var org = req.params.origin;
+        var dest = req.params.destination;
+        var dDate = req.params.departingDate;
+        var rDate = req.params.returningDate;
+        var tClass = req.params.class;
+        
+        db.connect(function(cb)
+        {
+            if(cb == true)
+            {
+                db.searchFlights(org,dest,dDate,rDate,function(content)
+                {
+                var jsonContent = JSON.parse(content);
+                res.send(jsonContent);
+                });
+            }
+
+            if(cb == false)
+            {
+                res.send(false)
+            }   
+        });
     });
 
     // Error Handling
