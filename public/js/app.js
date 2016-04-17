@@ -14,7 +14,7 @@ myApp.config(function($routeProvider) {
 
     $routeProvider.when('/flights', {
         templateUrl: 'views/viewFlights.html',
-        controller: 'viewflightsController'
+        controller: 'flightsController'
     });
 
     $routeProvider.when('/flight', {

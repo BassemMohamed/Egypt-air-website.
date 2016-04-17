@@ -97,19 +97,14 @@ module.exports = function(app)
 
     /* Middleware */
 
-    // Error Handling
-    app.use(function(req, res, next) 
-    {
-   	res.status(404).send('404 NOT FOUND');
-  	//res.sendfile('./public/error.html', {root: __dirname })
-	});
-
     /* ROUND-TRIP SEARCH REST ENDPOINT */
     app.get('/api/flights/search/:origin/:destination/:departingDate/:returningDate/:class', function(req, res) {
+        
         // retrieve origin, destiantion, departingDate, returningDate, and class from req.params.{{origin | departingDate | ...}}
         // return an array of objects with this exact format
-        console.log("URL CALLED!!");
-        return 
+        console.log("URL CALLED");
+        //console.log();
+        res.send(
         [{
             "flightNumber"      : "SE2804",
             "aircraftType"      : "Boeing",
@@ -134,9 +129,16 @@ module.exports = function(app)
             "currency"          : "USD",
             "class"             : "economy",
             "Airline"           : "United"
-        }];
-    });    
-	
+        }] );
+    });
+
+    // Error Handling
+    app.use(function(req, res, next) 
+    {
+   	res.status(404).send('404 NOT FOUND');
+  	//res.sendfile('./public/error.html', {root: __dirname })
+	});
+
 	/* ONE-WAY SEARCH REST ENDPOINT */
     app.get('/api/flights/search/:origin/:departingDate', function(req, res) {
         // retrieve origin, destiantion, departingDate, returningDate, and class from req.params.{{origin | departingDate}}
