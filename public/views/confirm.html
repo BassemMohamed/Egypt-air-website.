@@ -31,18 +31,18 @@
 				</form></li>
 			<li>
 				<form name="myForm" action="demo_form.asp" onsubmit="return validateForm()" method="post">
-					 Last Name:    <br><input type="text" name="lastname"> </input><br>
+					 Last Name:    <br><input type="text" name="lastname" required> </input><br>
 				 </form></li>
 			<li>
 				<form name="myForm" action="demo_form.asp" onsubmit="return validateForm()" method="post">
-					Passport ID:  <br><input type="text" name="passportid"> </input><br>
+					Passport ID:  <br><input type="text" name="passportid" required> </input><br>
 				</form> </li>
 			<li>
 				<form name="myForm" action="demo_form.asp" onsubmit="return validateForm()" method="post">
-					Issue Date:   <br><input type="text" name="issuedate"> </input><br>
+					Issue Date:   <br><input type="text" name="issuedate" required> </input><br>
 				</form></li>
 			<li>
-				Expiry Date:  <br><input type="text" name="expirydate"> </input><br>
+				Expiry Date:  <br><input type="text" name="expirydate" required> </input><br>
 			</form></li>
 		</ul>
 	</div>
@@ -52,8 +52,8 @@
 
 	<p> Payment Details:- </p> <br>
 
-	Payment Method: <input type="text" name="paymentmethod"></input> <br><br>
-	<button>Confirm</button> <br>
+	Payment Method: <input type="dropdown" name="paymentmethod"></input> <br><br>
+	<button>Confirm</button><br>
 
 </div>
 </div>
