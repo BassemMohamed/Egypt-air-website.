@@ -27,7 +27,7 @@ myApp.config(function($routeProvider) {
         controller: 'trackFlightController'
     });
 
-    $routeProvider.when('/booking', {
+    $routeProvider.when('/confirm', {
         templateUrl: 'views/confirm.html',
         controller: 'confirmController'
     });

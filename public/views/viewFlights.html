@@ -99,8 +99,20 @@
 				<br>	
 				
                 <div class="line submit">
-                	<a href="#flight"><input type="submit" ng-click='submit()' value="Search" style="margin-left: 750px; color: black" /></a>
+                	<a><input type="submit" ng-click='submit()' value="Search" style="margin-left: 750px; color: black" /></a>
                 </div>
+
+                <div class="roundcont" style="">
+	<ul class="flightlist">
+		<li class="flight cf" ng-repeat="x in flights">
+			<div><img src="../images/p.png"></img></div>
+			<div class="inside" style="margin-left: 40%;">{{x._id}}</div>
+			<div class="inside" style="margin-left: 40%;">{{x.originid}} - {{x.destinationid}}</div>
+			<div style="margin-left: 40%;">{{x.departuredate}} - {{x.arrivaldate}}
+			<input href="#/confirm" type="button" name="book" value="Book"  style="margin-left: 40%;"></div>
+		</li>
+	</ul>
+</div>
 
             
     </div>
