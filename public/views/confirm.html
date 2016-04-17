@@ -1,5 +1,10 @@
+<head>
+<link rel="stylesheet" href="public/css/style.css">
+</head>
+
+<body>
 <div id="confirm" ng-controller="confirmController">
-<h2> Confrim your ticket reservation. </h2> <br>
+<h2> Confrim your ticket reservation. </h2>
 <div id="flight-details">
 
 <p> Flight Details:- </p> <br>
@@ -12,27 +17,44 @@
 </div>
 
 </div>
-<div id="personal-details">
 
-<p> Personal Details:- </p> <br>
+<div style="margin-left: 15%;">
+<div id="col1"  class="roundcont" style="width:40%;">
 
-<div style="display: inline;">
-<ul>	
-<li> First Name:   <br><input type="text" name="firstname" > </input><br> </li>
-<li> Last Name:    <br><input type="text" name="lastname"> </input><br> </li>
-<li> Passport ID:  <br><input type="text" name="passportid"> </input><br> </li>
-<li> Issue Date:   <br><input type="text" name="issuedate"> </input><br> </li>
-<li> Expiry Date:  <br><input type="text" name="expirydate"> </input><br> </li>
-</ul>
+	<p> Personal Details:- </p> <br>
+
+	<div style="display: inline;">
+		<ul>
+			<li>
+				<form name="myForm" action="demo_form.asp" onsubmit="return validateForm()" method="post">
+					First Name:   <br><input type="text" name="firstname" > </input><br>
+				</form></li>
+			<li>
+				<form name="myForm" action="demo_form.asp" onsubmit="return validateForm()" method="post">
+					 Last Name:    <br><input type="text" name="lastname"> </input><br>
+				 </form></li>
+			<li>
+				<form name="myForm" action="demo_form.asp" onsubmit="return validateForm()" method="post">
+					Passport ID:  <br><input type="text" name="passportid"> </input><br>
+				</form> </li>
+			<li>
+				<form name="myForm" action="demo_form.asp" onsubmit="return validateForm()" method="post">
+					Issue Date:   <br><input type="text" name="issuedate"> </input><br>
+				</form></li>
+			<li>
+				Expiry Date:  <br><input type="text" name="expirydate"> </input><br>
+			</form></li>
+		</ul>
+	</div>
+
 </div>
+<div id="col1" class="roundcont" style="width: 40%;">
 
-</div>
-<div id="payment-details">
-	
-<p> Payment Details:- </p> <br>
+	<p> Payment Details:- </p> <br>
 
-Payment Method: <input type="text" name="paymentmethod"></input> <br><br>
-<button>Confirm</button> <br>
+	Payment Method: <input type="text" name="paymentmethod"></input> <br><br>
+	<button>Confirm</button> <br>
 
 </div>
 </div>
+</body>
