@@ -35,8 +35,9 @@ $('.close').click(function () {
 <body ng-controller="mainController">
 
 <section class="second">
-  dic
-  <nav class="navbar navbar-default navbar-inverse" role="navigation">
+
+   <nav class="navbar navbar-default navbar-inverse" role="navigation" style="background-color:#908f8f; color:navy;" >
+<div>
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div>
@@ -51,10 +52,10 @@ $('.close').click(function () {
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li><a href="#/">Home</a></li>
-            <li><a href="#about">About Us</a></li>
+            <li><a href="#/" Style="color: navy">Home</a></li>
+            <li><a href="#about"Style="color: navy">About Us</a></li>
             <li class="dropdown">
-              <a href=""class="dropdown-toggle" data-toggle="dropdown">Services <span class="caret"></span></a>
+              <a href=""class="dropdown-toggle" data-toggle="dropdown" Style="color: navy">Services <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="#flights">View Flights</a></li>
                 <li><a href="#trackflight">Track Flight</a></li>
@@ -63,10 +64,6 @@ $('.close').click(function () {
                 <li class="divider"></li>
                 <li><a href="#/">Contact Us</a>
                 </li>
-
-
-
-
               </ul>
             </li>
           </ul>
@@ -74,14 +71,13 @@ $('.close').click(function () {
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Search" style="font-size: 1.6rem;">
             </div>
-            <button type="submit" class="btn btn-default">Search</button>
+            <button type="submit" style="margin-right: 40;">Submit</button>
+            <div class="form-group"><img src="../images/mainLogo.png"></img></div>
           </form>
-         ->
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
-  </nav>
+    </nav>
 
-  
 
 
 
@@ -120,8 +116,7 @@ $('.close').click(function () {
         <div class="item"style="overflow: hidden;">
           <img src="./images/3.jpg" alt="Flower"style="height: 430px; width:100%;">
           <div class="carousel-caption">
-            <h1>Title</h1>
-            <p>Sample Text</p>
+            <h1>A member of the star alliance</h1>
           </div>
         </div>
 
@@ -134,27 +129,20 @@ $('.close').click(function () {
       </div>
 
 
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+   <!--    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
       </a>
       <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
-      </a>
+      </a> -->
   </div>
 
 
 
   <!-- ANGULAR DYNAMIC CONTENT -->
-  <div id="mainBody" style="text-align: center;
-      color: navy;
-      background: rgba(160, 36, 39, 0.7);
-      padding: 50px 50px 50px 50px; 
-      width: 1000px;
-      position :absolute;
-      left: 20%;
-      border-radius: 50px">
+  <div id="mainBody" >
           <div ng-view></div>
   </div>
 
