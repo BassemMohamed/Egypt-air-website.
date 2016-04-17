@@ -55,7 +55,7 @@ background-image: url("/../images/back.jpg");
 background-repeat: no-repeat;
 background-size: cover;
 width: 100%;
-height: 230%;
+height: 260%;
 
 }
 section p{
@@ -314,7 +314,7 @@ text-align: center;
 
 #trackFlight h1
 {
-  color: white;
+  color: red;
   font-size: 60px;
   text-align: center;
 }
@@ -329,16 +329,14 @@ margin-right: 40px
 #viewflights h1
 {
   text-align: center;
-  color: white;
-  box-shadow: rgba(auto);
+  color: red;
   font-size: 60px;
 }
 
 #viewflights div
 {
-  text-align: left;
-  color: rgb(201, 180, 164);
-  font-size: 20
+  text-align: center;
+  color: navy;
 }
 
 /*-------------------------------------TESTING-----------------------------------*/
@@ -409,6 +407,7 @@ border-radius: 25px 25px 25px 25px;
 form label {
 display:inline-block; width:140px;
 }
+
 
 .flightlist {
   background: #EEE8D5;
@@ -502,7 +501,8 @@ ul{
 }
 
 .roundcont {
-overflow-y:scroll;
+overflow-y:auto;
+border-radius: 15px 15px 15px 15px;
 margin : 10px;
 width : 98%;
 height: 25%;
@@ -510,10 +510,33 @@ background : #E9DDC9;
 color : #333;
 }
 
-.roundsomething{
+.roundwelcome {
+overflow-y:hidden;
+border-radius: 15px 15px 15px 15px;
+margin : 10px;
+width : 98%;
+height: 25%;
+background : #E9DDC9;
+color : #333;
+}
+.roundc {
+overflow-y:hidden;
+border-radius: 25px 15px 15px 15px;
+position:relative;
+left: 25%;
+margin : 10px;
+width : 50%;
+height: 25%;
+background : #E9DDC9;
+color : #333;
+}
+.sidebar{
+  position: relative;
+  border-radius: 15px 15px 15px 15px;
   width : 98%;
-  height: 10.9%;
-  background : #E9DDC9;
+  margin: 0;
+  height: auto;
+  width: auto;
   color : #333;
 }
 li.x {
@@ -526,6 +549,7 @@ li.x:last-child {
 }
 
 li.x a {
+  border-radius: 10px 10px 10px 10px;
   text-decoration: none;
   color: #000;
   display: block;
@@ -549,6 +573,14 @@ margin-bottom : 1em;
 border-right : 0px solid #eee;
 padding-right : 3%;
 }
+
+#col11 {
+float : left;
+width : 20%;
+margin-bottom : 1em;
+border-right : 0px solid #eee;
+padding-right : 3%;
+}
 #col2 {
 float : left;
 width : 33%;
@@ -563,3 +595,116 @@ width : 27%;
 margin-left : 4%;
 margin-bottom : 1em;
 }
+
+.black_overlay{
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 260%;
+    background-color: black;
+    z-index:1001;
+    -moz-opacity: 0.8;
+    opacity:.80;
+    filter: alpha(opacity=80);
+}
+.white_content {
+
+   opacity: 0.8;
+
+
+    display: none;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 70%;
+    padding: 16px;
+    border: 4px solid navy;
+    background-color: white;
+    z-index:1002;
+    overflow: auto;
+}
+
+.division{
+  width:50%;
+  height:100px;
+  float:left;
+}
+
+#light{
+  -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+   -moz-animation: fadein 1s; /* Firefox < 16 */
+    -ms-animation: fadein 1s; /* Internet Explorer */
+     -o-animation: fadein 1s; /* Opera < 12.1 */
+        animation: fadein 1s;
+
+}
+
+#light-out{
+  -webkit-animation: fadeout 1s; /* Safari, Chrome and Opera > 12.1 */
+   -moz-animation: fadeout 1s; /* Firefox < 16 */
+    -ms-animation: fadeout 1s; /* Internet Explorer */
+     -o-animation: fadeout 1s; /* Opera < 12.1 */
+        animation: fadeout 1s;
+
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 0.8; }
+}
+
+@keyframes fadeout {
+    from { opacity: 0.8; }
+    to   { opacity: 0; }
+}
+
+
+/* ---------FADE IN---------*/
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 0.8; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 0.8; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 0,8; }
+}
+
+/* ---------FADE OUT---------*/
+
+/* Firefox < 16 */
+@-moz-keyframes fadeout {
+    from { opacity: 0.8; }
+    to   { opacity: 0; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadeout {
+    from { opacity: 0.8; }
+    to   { opacity: 0; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadeout {
+    from { opacity: 0.8; }
+    to   { opacity: 0; }
+}
+body h2{
+  color: navy;
+  font-size: 50px;
+}
+
+form{
+  margin: 0;
