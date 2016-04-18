@@ -32,16 +32,16 @@ myApp.config(function($routeProvider) {
         controller: 'confirmController'
     });
 
-    $routeProvider.when('/boarding', {
-        templateUrl: 'views/boarding.html',
-        controller: 'boardingController'
+    $routeProvider.when('/confirm', {
+        templateUrl: 'views/confirm.html',
+        controller: 'confirmController'
     });
 
     $routeProvider.when('/about', {
         templateUrl: 'views/about.html',
         controller: 'aboutController'
     });
-    // $routeProvider.otherwise({
-    // redirectTo: '/'
-    // });
+    $routeProvider.otherwise({
+    redirectTo: '/'
+    });
 });

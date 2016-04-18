@@ -1,15 +1,7 @@
 // Main Controller
-myApp.controller('mainController',function mainController($scope, $http) 
+myApp.controller('mainController',function mainController($scope) 
 {
-	$http({
-	    method: 'GET',
-	    url: '/api/flights'
-	}).then(function successCallback(response) {
-	    $scope.flights = response;
-	    console.log("Done");
-	}, function errorCallback(response) {
-	    console.log(response);
-	});
+	
 });
 // Home Controller
 myApp.controller('homeController',function homeController($scope) 
@@ -17,13 +9,34 @@ myApp.controller('homeController',function homeController($scope)
 
 });
 // viewFlights Controller
-myApp.controller('flightsController',function flightsController($scope) 
+myApp.controller('flightsController',function flightsController($scope, $http) 
 {
+	$scope.submit = function()
+	{
+		var origin = $scope.origins;
+		var destination = $scope.destinations;
+		var ticketclass = $scope.classticket;
+		var departingDate = $scope.departingdate; 
+		var returningDate = $scope.returningDate;
 
-});
-// Flight Controller
-myApp.controller('flightsController',function flightsController($scope) 
-{
+		$http({
+	    	method: 'GET',
+	    	url: '/api/flights/search/' + origin + '/' + destination + '/' + departingDate + '/' + returningDate  + '/' + ticketclass + '/'
+		}).then(function successCallback(response) {
+	   	 	
+	   	 	if(response == false)
+	   	 	{
+	   	 		// JUMP TO FLIGHTS page
+	   	 	}
+
+	   	 	$scope.flights = response.data;
+	   	 	console.log(response.data);
+	   	 	console.log("Done");
+		}, function errorCallback(response) {
+	    	console.log(response);
+		});
+	}
+	
 
 });
 // Track a flight Controller
@@ -46,4 +59,3 @@ myApp.controller('confirmController',function confirmController($scope)
 {
 
 });
-

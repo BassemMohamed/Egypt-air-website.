@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 
-<div id="flight" ng-controller="flightController" style="text-align: center;
+<div id="flight" ng-controller="flightsController" style="text-align: center;
       color: navy;
-      background: rgba(160, 36, 39, 0.7);
+      background: rgba(233, 221, 201, 0.7);
       padding: 50px 50px 50px 50px; 
       width: 1000px;
       position :absolute;
@@ -14,39 +14,12 @@
 	<ul class="flightlist">
 		<li class="flight cf">
 			<div><img src="../images/p.png"></img></div>
-			<div class="inside" style="margin-left: 40%;">Flight-815</div>
-			<div class="inside" style="margin-left: 40%;">Cairo - Berlin</div>
-			<div style="margin-left: 40%;">8:45 - 12:45
-			<input type="button" name="book" value="Book"  style="margin-left: 40%;"></div>
+			Flight number: <div class="inside" style="margin-left: 40%;">{{x._id}}</div>
+			<div class="inside" style="margin-left: 40%;">{{x.originid}} - {{x.destinationid}}</div>
+			Time :<div style="margin-left: 40%;">{{x.departuredate}} - {{x.arrivaldate}}
+			<a href="#confirm"><input type="button" name="book" value="Book"  style="margin-left: 40%;"></a></div>
 		</li>
-		<li class="flight cf">
-			<img src="../images/p.png"></img>
-			<div class="inside" style="margin-left: 40%;">Flight-223</div>
-			<div class="inside" style="margin-left: 40%;">Paris - Cairo</div>
-			<div style="margin-left: 40%;">10:30 - 12:45
-			<input type="button" name="book" value="Book"  style="margin-left: 40%;"></div>
-		</li>
-		<li class="flight cf">
-			<img src="../images/p.png"></img>
-			<div class="inside" style="margin-left: 40%;">Flight-619</div>
-			<div class="inside" style="margin-left: 40%;">Cairo - Los Angeles</div>
-			<div style="margin-left: 40%;">8:15 - 17:20
-			<input type="button" name="book" value="Book"  style="margin-left: 40%;"></div>
-		</li>
-		<li class="flight cf">
-			<img src="../images/p.png"></img>
-			<div class="inside" style="margin-left: 40%;">Flight-815</div>
-			<div class="inside" style="margin-left: 40%;">Berlin - Cairo</div>
-			<div style="margin-left: 40%;">16:30 - 20:30
-			<input type="button" name="book" value="Book"  style="margin-left: 40%;"></div>
-		</li>
-		<li class="flight cf">
-			<img src="../images/p.png"></img>
-			<div class="inside" style="margin-left: 40%;">Flight-283</div>
-			<div class="inside" style="margin-left: 40%;">Cairo - Kuala Lumpur</div>
-			<div style="margin-left: 40%;">8:45 - 12:45
-			<input type="button" name="book" value="Book"  style="margin-left: 40%;"></div>
-		</li>
+		
 	</ul>
 </div>
 

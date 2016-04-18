@@ -1,11 +1,11 @@
-// routes.js  	
+// routes.js    
 var db = require('./db.js');
 var seeder = require('./dbSeed.js');
 
 module.exports = function(app) 
 {
     // server routes ===========================================================
-	app.get('/api/flights', function(req, res) {
+    app.get('/api/flights', function(req, res) {
         
         db.connect(function(cb)
         {
@@ -24,14 +24,14 @@ module.exports = function(app)
         
         db.connect(function(cb)
         {
-        	if(cb == true)
-        	{
-        		db.getAirports(function(content)
-	        	{
-	        	var jsonContent = JSON.parse(content);
-	        	res.send(jsonContent);
-	        	});
-        	}	
+            if(cb == true)
+            {
+                db.getAirports(function(content)
+                {
+                var jsonContent = JSON.parse(content);
+                res.send(jsonContent);
+                });
+            }   
         });
     });
 
@@ -71,8 +71,8 @@ module.exports = function(app)
 
         /* SEED DB */
     app.get('/db/seed', function(req, res) {
-    	seeder.seed(function(cb)
-    	{
+        seeder.seed(function(cb)
+        {
             if(cb == true)
             {
                 res.send("Database Seeded!");
@@ -81,14 +81,14 @@ module.exports = function(app)
             {
                 res.send("Error Seeding Database!");
             }
-    	});
+        });
     });      
 
     /* DELETE DB */
     app.get('/db/delete', function(req, res) {
-    	db.clearDB(function(cb){
-    		console.log(cb);
-    	});
+        db.clearDB(function(cb){
+            console.log(cb);
+        });
     });      
 
     /* ******************************************** */
@@ -97,49 +97,51 @@ module.exports = function(app)
 
     /* Middleware */
 
+    /* ROUND-TRIP SEARCH REST ENDPOINT */
+    app.get('/api/flights/search/:origin/:destination/:departingDate/:returningDate/:class', function(req, res) 
+    {
+        //console.log(req.params.class);
+        // retrieve origin, destiantion, departingDate, returningDate, and class from req.params.{{origin | departingDate | ...}}
+        // return an array of objects with this exact format
+        var org = req.params.origin;
+        var dest = req.params.destination;
+        var dDate = req.params.departingDate;
+        var rDate = req.params.returningDate;
+        var tClass = req.params.class;
+        
+        db.connect(function(cb)
+        {
+            if(cb == true)
+            {
+                db.searchFlights(org,dest,dDate,rDate,function(content)
+                {
+                var jsonContent = JSON.parse(content);
+                res.send(jsonContent);
+                });
+            }
+
+            if(cb == false)
+            {
+                res.send(false)
+            }   
+        });
+    });
+
     // Error Handling
     app.use(function(req, res, next) 
     {
-   	res.status(404).send('404 NOT FOUND');
-  	//res.sendfile('./public/error.html', {root: __dirname })
-	});
+    res.status(404).send('404 NOT FOUND');
+    //res.sendfile('./public/error.html', {root: __dirname })
+    });
 
-    /* ROUND-TRIP SEARCH REST ENDPOINT */
-    app.get('/api/flights/search/:origin/:destination/:departingDate/returningDate/:class', function(req, res) {
-        // retrieve origin, destiantion, departingDate, returningDate, and class from req.params.{{origin | departingDate | ...}}
-        // return an array of objects with this exact format
-        return 
-        [{
-            "flightNumber"      : "SE2804",
-            "aircraftType"      : "Boeing",
-            "aircraftModel"     : "747",
-            "departureDateTime" : "Tuesday, April 12, 2016 06:25 PM",
-            "arrivalDateTime"   : "Wednesday, April 13, 2016 12:25 AM",
-            "origin"            : "JFK",
-            "destination"       : "CAI",
-            "cost"              : "750",
-            "currency"          : "USD",
-            "class"             : "economy",
-            "Airline"           : "United"
-        },{
-            "flightNumber"      : "SE2805",
-            "aircraftType"      : "Boeing",
-            "aircraftModel"     : "747",
-            "departureDateTime" : "Friday, April 23, 2016 04:25 AM",
-            "arrivalDateTime"   : "Friday, April 23, 2016 03:25 PM",
-            "origin"            : "CAI",
-            "destination"       : "JFK",
-            "cost"              : "845",
-            "currency"          : "USD",
-            "class"             : "economy",
-            "Airline"           : "United"
-        }];
-    });    
-	
-	/* ONE-WAY SEARCH REST ENDPOINT */
-    app.get('/api/flights/search/:origin/:departingDate', function(req, res) {
+    /* ONE-WAY SEARCH REST ENDPOINT */
+    app.get('/api/flights/search/:origin/:destiantion/:departingDate', function(req, res) {
         // retrieve origin, destiantion, departingDate, returningDate, and class from req.params.{{origin | departingDate}}
         // return an array of objects with this exact format
+        var org = req.params.origin;
+        var dest = req.params.destination;
+        var dDate = req.params.departingDate;
+        var tClass = req.params.class;
         return 
         [{
             "flightNumber"      : "SE2804",
