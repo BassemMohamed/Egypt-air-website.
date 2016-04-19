@@ -11,6 +11,24 @@ myApp.controller('homeController',function homeController($scope)
 // viewFlights Controller
 myApp.controller('flightsController',function flightsController($scope, $http) 
 {
+
+	$http({
+	    	method: 'GET',
+	    	url: '/api/flights/'
+		}).then(function successCallback(response) {
+	   	 	
+	   	 	if(response == false)
+	   	 	{
+	   	 		// JUMP TO FLIGHTS page
+	   	 	}
+
+	   	 	$scope.flights = response.data;
+	   	 	console.log(response.data);
+	   	 	console.log("Done");
+		}, function errorCallback(response) {
+	    	console.log(response);
+		});
+
 	$scope.submit = function()
 	{
 		var origin = $scope.origins;
