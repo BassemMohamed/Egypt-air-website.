@@ -69,6 +69,10 @@ module.exports = function(app)
         res.sendfile('./public/views/index.html');
     });
 
+    app.get('/api/flight' ,function(req,res) {
+        res.sendfile('./public/views/flight.html');
+    })
+
         /* SEED DB */
     app.get('/db/seed', function(req, res) {
         seeder.seed(function(cb)
