@@ -4,7 +4,7 @@
     "aircraftType": "Airbus",
     "aircraftModel": "A380",
     "departuredate": "Tue April 12 2016 7:54:57 GMT+0300 (EST)",
-    "duration": "3 hours",
+    "duration":  "3 hours",
     "arrivaldate": "Tue April 12 2016 10:54:57 GMT+0300 (EST)",
     "originid": "MUM",
     "destinationid": "DEL",

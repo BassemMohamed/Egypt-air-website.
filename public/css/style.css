@@ -411,7 +411,7 @@ display:inline-block; width:140px;
 
 .flightlist {
   background: #EEE8D5;
-  width: 35%;
+  width: 80%;
   margin: 0 auto;
   margin-bottom: 30px;
   border-radius: 10px 10px 10px 10px;
@@ -427,8 +427,8 @@ display:inline-block; width:140px;
 
 .flightlist li {
   margin: 0;
-  padding: 10px 10px 0 10px;
-  height:92px;
+  padding: 20px 20px 0 20px;
+  height:192px;
   border-bottom: 1px dotted black;
 }
 
@@ -439,7 +439,7 @@ display:inline-block; width:140px;
 
 .flightlist li:hover {
   background: #FDF6E3;
-  height:92px;
+  height:192px;
 }
 
 .flight img {
@@ -515,7 +515,7 @@ overflow-y:hidden;
 border-radius: 15px 15px 15px 15px;
 margin : 10px;
 width : 98%;
-height: 25%;
+height: flightlist25%;
 background : #E9DDC9;
 color : #333;
 }
