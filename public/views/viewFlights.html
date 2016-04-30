@@ -1,173 +1,124 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta name="generator" content=
-  "HTML Tidy for Linux (vers 25 March 2009), see www.w3.org" />
-  <link rel="stylesheet" href="../css/jquery-ui.css" type="text/css" />
-  <script src="../libs/jquery.min.js" type="text/javascript">
-</script>
-  <script src="../libs/jquery-ui.min.js" type="text/javascript">
-</script>
-  <script language="javascript" type="text/javascript">
-//<![CDATA[
-                $(document).ready(function() {
-                        $("#datepicker").datepicker({ showOn: "both",
-                                                                                                                                                buttonImage: "../images/img/1.jpg",
-                                                                                                                                                buttonImageOnly: true });
-                });
-  //]]>
-  </script>
 
-  <title></title>
-  <style type="text/css">
-/*<![CDATA[*/
-  input.c5 {margin-left: 40%;}
-  div.c4 {margin-left: 40%;}
-  div.c3 {opacity: .85;}
-  h1.c2 {color: navy;}
-  h1.c1 {color: white;}
-  /*]]>*/
-  </style>
+
 </head>
-
 <body ng-controller="flightsController">
-  <div id="viewflights" >
-    <h1 class="c1">View Flights</h1>
 
-    <div id="container" class="c3">
-      <form>
-        <h1 class="c2">Advanced Search</h1>
+<div id="viewflights"  style="text-align: center;
+      color: navy;
+      margin-top: 20px;
+      background: rgba(233, 221, 201, 0.7);
+      padding: 50px 50px 50px 50px;
+      width: 1000px;
+      position :relative;
+      left: 20%;
+      border-radius: 50px">
 
-        <div class="line">
-          <label for="from">From:</label> <select name="destinations">
-            <option value="cairo">
-              Cairo
-            </option>
+	<h1 > View Flights </h1>
 
-            <option value="berlin">
-              Berlin
-            </option>
+	<div>
+                <div class="line"><label for="surname">Select Class: </label>
+						<select id="classticket" ng-model="classticket">
+							<option value="Economy">Economy</option>
+ 							<option value="Business">Business</option>
+						</select>
+				</div>
+				<br>
+                <div class="line">
+						<label for="from">From: </label>
+						<select id="origins" ng-model="origins">
+							<option value="CAI">Cairo</option>
+							<option value="BER">Berlin</option>
+							<option value="MUM">Mumbai</option>
+							<option value="LAX">Los Angeles</option>
+							<option value="MIL">Milan</option>
+							<option value="DEL">Delhi</option>
+							<option value="HOK">Hong Kong</option>
+							<option value="TAI">Taiwan</option>
+							<option value="JOH">Johannesburg</option>
+							<option value="CPT">Cape Town</option>
+							<option value="RIY">Riyadh</option>
+							<option value="JFK">New York</option>
+							<option value="LAV">Las Vegas</option>
+							<option value="LAX">Los Angeles</option>
+							<option value="SAF">San Francisco</option>
+							<option value="FRK">Frankfurt</option>
+							<option value="ROM">Rome</option>
+							<option value="JED">Jeddah</option>
+						</select>
+						<label for="to">To: </label>
+						<select id="destinations" ng-model="destinations">
+							<option value="CAI">Cairo</option>
+							<option value="BER">Berlin</option>
+							<option value="MUM">Mumbai</option>
+							<option value="LAX">Los Angeles</option>
+							<option value="MIL">Milan</option>
+							<option value="DEL">Delhi</option>
+							<option value="HOK">Hong Kong</option>
+							<option value="TAI">Taiwan</option>
+							<option value="JOH">Johannesburg</option>
+							<option value="CPT">Cape Town</option>
+							<option value="RIY">Riyadh</option>
+							<option value="JFK">New York</option>
+							<option value="LAV">Las Vegas</option>
+							<option value="LAX">Los Angeles</option>
+							<option value="SAF">San Francisco</option>
+							<option value="FRK">Frankfurt</option>
+							<option value="ROM">Rome</option>
+							<option value="JED">Jeddah</option>
+						</select>
+				</div>
 
-            <option value="kuala">
-              Kuala Lumpur
-            </option>
+				<br>
 
-            <option value="la">
-              Los Angeles
-            </option>
 
-            <option value="paris">
-              Paris
-            </option>
+				<div>
+					Rounded Trip: <input type="checkbox" ng-model="checked" aria-label="Toggle ngHide">
+				</div>
 
-            <option value="london">
-              London
-            </option>
-          </select> <label for="to">To:</label> <select name="destinations">
-            <option value="cairo">
-              Cairo
-            </option>
+				<br>
 
-            <option value="berlin">
-              Berlin
-            </option>
+				<div>
 
-            <option value="kuala">
-              Kuala Lumpur
-            </option>
+					<div class="Date_of_departure" style="display: inline; ">
+                		Departure date:
+						<input id="departingdate" ng-model="departingdate" style="width: 100px" />
+					</div>
 
-            <option value="la">
-              Los Angeles
-            </option>
 
-            <option value="paris">
-              Paris
-            </option>
+					<div class="Date_of_Arrival" ng-show="checked" style="display: inline; margin-left: 250px; ">
+						Arrival date:
+						<input id="returningDate" ng-model="returningDate" style="width: 100px" />
+					</div>
 
-            <option value="london">
-              London
-            </option>
-          </select>
-        </div><!-- You may want to consider adding a "confirm" password box also -->
+				</div>
 
-        <div class="line">
-          <label for="surname">Select Class:</label> <select name="destinations">
-            <option value="vip">
-              VIP
-            </option>
+				<br>
 
-            <option value="fclass">
-              First Class
-            </option>
+                <div class="line submit">
+                	<a href=""><input type="submit" ng-click='submit()' value="Search" style="margin-left: 750px; color: black" /></a>
+                </div>
 
-            <option value="economyplus">
-              Economy Plus
-            </option>
 
-            <option value="economy">
-              Economy
-            </option>
-
-            <option value="business">
-              Business
-            </option>
-          </select>
-        </div>
-
-        <div class="line">
-          <label for="other_names">Price Range:</label> <select name="classes">
-            <option value="1">
-              $200-250
-            </option>
-
-            <option value="2">
-              $250-350
-            </option>
-
-            <option value="3">
-              $350-500
-            </option>
-
-            <option value="4">
-              $500+
-            </option>
-          </select>
-        </div>Date of Departure: <input id="datepicker" /> <script language="javascript"
-        type="text/javascript">
-//<![CDATA[
-            $(document).ready(function() {
-            $("#datepicker").datepicker();
-                                          });
-        //]]>
-        </script> Date of Arrival:
-
-        <form>
-          <input id="datepicker" />
-        </form>
-
-        <div class="line submit">
-          <input type="submit" value="Search" />
-        </div>
-      </form>
     </div>
-  </div><br />
-  <br />
-  <br />
-  <div class="roundcont" style="background-color: rgba(233,221,201,0.8)">
-  <div class="flightlist flight" ng-repeat="x in flights">
+    <div class="roundcont" style="">
+	<ul class="flightlist">
+		<li class="flight cf" ng-repeat="x in flights">
+			<div><img src="../images/p.png"></img></div>
+			Flight number: <div class="inside" style="margin-left: 40%;">{{x._id}}</div>
+			<div class="inside" style="margin-left: 40%;">{{x.originid}} - {{x.destinationid}}</div>
+			Time :<div style="margin-left: 40%;">{{x.departuredate}} - {{x.arrivaldate}}
+			<a href="#confirm"><input type="button" name="book" value="Book"  style="margin-left: 40%;"></a></div>
+		</li>
+		
+	</ul>
+	</div>
 
-    <div><img src="../images/p.png" /></div>
-    <p>{{x._id}}</p>
-    <p>{{x.originid}} - {{x.destinationid}}</p>
-    <p>
-    {{x.departuredate}} - {{x.arrivaldate}}
-      <input type="button" name="book" value="Book" class="c5" href="#about" />
-    </p>
 
-  </div>
-  </div>
 
+</div>
 </body>
+
 </html>

@@ -17,5 +17,15 @@
     app.listen(8080);
     console.log("EgyptAir App listening on port 8080");
 
+    //for the deployment
+   
+    /**
+    app.listen(80, function(){
+    console.log("EgyptAir App listening on port 8080");
+   });
+
+   **/
+ 
+
     // expose app           
     exports = module.exports = app; 

@@ -1,4 +1,4 @@
-// Seeding DB with the json files
+    // Seeding DB with the json files
 var db = require('./db.js');
 var fs = require('fs');
 

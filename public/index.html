@@ -7,20 +7,20 @@
     <meta name = "viewport" content = "width = device-width, initial-scale = 1">
 
         <!-- load css -->
-	<link rel="stylesheet" href="./css/style.css">
-	<link rel="stylesheet" href="./css/bootstrap.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <link href="http://www.egyptair.com/Style%20Library/LINKDev/Img/favicon.ico" rel="icon" type="image/x-icon" alt="EgyptAir Favourite Icon" />
 
-	<!-- ANGULAR SCRIPTS -->
+  <!-- ANGULAR SCRIPTS -->
 
-	<script src="libs/angular.js"></script>
+  <script src="libs/angular.js"></script>
   <script src="libs/angular-route.js"></script>
   <script src="libs/jquery.min.js"></script>
-	<script src="js/app.js"></script>
-	<script src="js/controllers.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controllers.js"></script>
   <script src="./libs/bootstrap.min.js"></script>
 </head>
 
-<!-- <<<<<<< HEAD -->
 <script type="text/javascript">
 $('.button').click(function () {
   $('.overlay').show();
@@ -30,13 +30,14 @@ $('.close').click(function () {
 })
 </script>
 
-<body>
-<!-- ======= -->
+
+
+
 <body ng-controller="mainController">
-<!-- >>>>>>> origin/dev -->
 
 <section class="second">
-  <nav class="navbar navbar-default navbar-inverse" role="navigation" style="background-color:#908f8f; color:navy;" >
+
+   <nav class="navbar navbar-default navbar-inverse" role="navigation" style="background-color:#908f8f; color:navy;" >
 <div>
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -74,57 +75,16 @@ $('.close').click(function () {
             <button type="submit" style="margin-right: 40;">Submit</button>
             <div class="form-group"><img src="../images/mainLogo.png"></img></div>
           </form>
-          <!-- <ul class="nav navbar-nav navbar-right">
-            <li><p class="navbar-text">Already have an account?</p></li>
-            <li class="dropdown">
-              <a href="" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
-    			<ul id="login-dp" class="dropdown-menu">
-    				<li>
-    					 <div class="row">
-    							<div class="col-md-12">
-    								Login via
-    								<div class="social-buttons">
-    									<a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
-    									<a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
-    								</div>
-                                    or
-    								 <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
-    										<div class="form-group">
-    											 <label class="sr-only" for="exampleInputEmail2">Email address</label>
-    											 <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
-    										</div>
-    										<div class="form-group">
-    											 <label class="sr-only" for="exampleInputPassword2">Password</label>
-    											 <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
-                                                 <div class="help-block text-right"><a href="">Forget the password ?</a></div>
-    										</div>
-    										<div class="form-group">
-    											 <button type="submit" class="btn btn-primary btn-block">Sign in</button>
-    										</div>
-    										<div class="checkbox">
-    											 <label>
-    											 <input type="checkbox"> keep me logged-in
-    											 </label>
-    										</div>
-    								 </form>
-    							</div>
-    							<div class="bottom text-center">
-    								New here ? <a href="#"><b>Join Us</b></a>
-    							</div>
-    					 </div>
-    				</li>
-    			</ul>
-            </li>
-          </ul> -->
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
 
 
-    <div id="myCarousel" class="carousel slide" data-ride="carousel" style="overflow: hidden;
+
+
+  <div id="myCarousel" class="carousel slide" data-ride="carousel" style="overflow: hidden;
         overflow-x:hidden;
         overflow-y: hidden;">
-      <!-- Indicators -->
       <ol class="carousel-indicators" style="overflow: hidden;">
         <li data-target="#myCarousel" data-slide-to="0" class="active" data-interval="4000"></li>
         <li data-target="#myCarousel" data-slide-to="1" data-interval="4000"></li>
@@ -157,8 +117,7 @@ $('.close').click(function () {
         <div class="item"style="overflow: hidden;">
           <img src="./images/3.jpg" alt="Flower"style="height: 430px; width:100%;">
           <div class="carousel-caption">
-            <h1>Title</h1>
-            <p>Sample Text</p>
+            <h1>A member of the star alliance</h1>
           </div>
         </div>
 
@@ -171,7 +130,7 @@ $('.close').click(function () {
       </div>
 
 
-      <!-- <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+   <!--    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
       </a>
@@ -179,47 +138,20 @@ $('.close').click(function () {
         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a> -->
-    </div>
+  </div>
 
-</div>
 
-</div>
 
-<!--<div id="nav">
-    <div id="nav_wrapper">
-       <ul style="   position: relative; width: 1700px;">
-            <li style="background-color: rgba(0, 157, 226, 0);"> <a href="#home"><button><img id="ok" src="images/logo.png"></button></a></li>
-            <li style="background-color: rgba(0, 157, 226, 0);" ><a href="#flights"><button>View flights</button></a>
-            </li>
-            <li style="background-color: rgba(0, 157, 226, 0);"> <a href="#trackflight"><button>Track A Flight</button></a>
-            </li>
-            <li style="background-color: rgba(0, 157, 226, 0);"><a href="#boarding"><button>Boarding</button></a>
-            </li>
+  <!-- ANGULAR DYNAMIC CONTENT -->
+  <div id="mainBody" >
+          <div ng-view></div>
+  </div>
 
-            <li style="background-color: rgba(0, 157, 226, 0);">
-               <input type="text" name="username" style="
-          border: 2px solid #A4697C;
-          border-radius: 40px;
-          height: 28px;
-          width: 206px;
-        "><button>Search</button>
-            </li>
+  <br>
+  <br>
+  <div>
 
-        </ul>
-    </div>
-</div> -->
-
-<div>
-
-<!-- ANGULAR DYNAMIC CONTENT -->
-<div id="mainBody">
-<div ng-view></div>
-</div>
-
-<br>
-<br>
-
-   <footer class="site-footer"   >
+  <footer class="site-footer"   >
                 <div class="row">
                     <div class="col-md-12">
                         <nav class="footer-nav clearfix">
@@ -233,11 +165,12 @@ $('.close').click(function () {
                 </div> <!-- /.row -->
                 <div class="row">
                     <div class="col-md-12">
-                    <p class="copyright-text">Copyright &copy; 2016 : Developed by Code worms Team</p>
+                    <p class="copyright-text" style="color: black;">Copyright &copy; 2016 : Developed by Code worms Team</p>
                 </div> <!-- /.col-md-12 -->
                 </div> <!-- /.row -->
-        </footer> <!-- /.site-footer -->
+    </footer>
+    </div>
+         <!-- /.site-footer -->
 </section>
-</div>
 </body>
 </html>
