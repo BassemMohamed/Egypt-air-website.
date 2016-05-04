@@ -66,11 +66,11 @@ module.exports = function(app)
     });
 
     app.get('/', function(req, res) {
-        res.sendfile('./public/views/index.html');
+        res.sendfile('./www/templates/index.html');
     });
 
     app.get('/api/flight' ,function(req,res) {
-        res.sendfile('./public/views/flight.html');
+        res.sendfile('./www/templates/flight.html');
     })
 
         /* SEED DB */
